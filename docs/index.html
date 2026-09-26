@@ -74,7 +74,7 @@
 const fmt = (n, d=2) => n >= 1e6 ? (n/1e6).toFixed(1)+'M' : n >= 1000 ? (n/1000).toFixed(1)+'k' : Number(n).toFixed(d)
 const fmtInt = n => Math.round(n).toLocaleString('en-US')
 
-fetch('demo.json').then(r=>r.json()).then(d=>{document.getElementById('demoNet').textContent=d.network+' · preset '+d.preset+' · mint '+d.token.mint;document.getElementById('demoSteps').innerHTML=d.lifecycle.map(x=>'<li>'+x+'</li>').join('');document.getElementById('demoTx').textContent=d.transactions.map(t=>t.step+'\n  '+t.sig).join('\n\n')}).catch(()=>{document.getElementById('demoSection').style.display='none'});
+fetch('demo.json').then(r=>r.json()).then(d=>{document.getElementById('demoNet').textContent=d.network+' · preset '+d.preset+' · mint '+d.token.mint;document.getElementById('demoSteps').innerHTML=d.lifecycle.map(x=>'<li>'+x+'</li>').join('');document.getElementById('demoTx').innerHTML=d.transactions.map(t=>t.step+'\n  <a href="'+t.explorer.replace('{}',t.sig)+'" target="_blank">'+t.sig+'</a>').join('\n\n')}).catch(()=>{document.getElementById('demoSection').style.display='none'});
 fetch('data.json').then(r => r.json()).then(data => {
   const list = document.getElementById('presetList')
   let active = null

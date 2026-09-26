@@ -1,16 +1,51 @@
 {
-  "network": "localnet (solana-test-validator, full Meteora program set)",
-  "preset": "devnet-toy",
-  "token": { "name": "CurveLab Demo", "symbol": "CLAB", "mint": "AoaDDezLqgniMF6ZyH2qm3degtVaxLdRsedByAxYx3pQ" },
-  "config": "9uY7SAsmKtNLNjBPWeJbXUpdWDXkotvJ1LLWKzbvnavr",
-  "pool": "6ozTAtNKhi33jdFpSrtGHymxTNvtQJAzsDiZ8wiy3yFz",
-  "transactions": [
-    { "step": "create config", "sig": "5kRoLU84GBKdtDCJ9E9XcCzRtaWzibANx1pwKGca9B1X5EqZngxSosrSwoQyrZNv9UJGD6mihYYtTXjrtZ8AU7ej" },
-    { "step": "create pool", "sig": "4Z6f4FY1adXAfp6oYiHp5QdNe7Tk9ovWbro3VwxGqZcTBFKru5N74B6SjxDBe7p9JkA2Dxge1LVZopSTJnNXTqsg" },
-    { "step": "buy 1.03 SOL", "sig": "2CBvAXaBN6evJj9prdMy4jVgrtgE6PAvzp2tDeHwSY7mkDRVED94GRkTL1YcowtFZqmY5tpczduYp4q7iuxMS3aw" },
-    { "step": "buy 0.02 SOL", "sig": "3Hfd1EMnHUm7taMdtaG2dAhGQhBGDS3VyfJpNeMZGzGSJaXBg6vxs39DD6WMzYgFoU1m9yuteeDtsk5DoWsE6njX" },
-    { "step": "buy 0.0025 SOL", "sig": "iqPRCgZTFcfzHxhqYb5xuNPzY6eiJJLju9XtUvTxWJkuQ1GweQJbvMxSRzN2ZyqFiBdPSLfUfJ6cU8jpwkWGn3s" },
-    { "step": "final partial-fill buy (graduation 100%)", "sig": "MG8YiQ5nTwxuqyQRVt86fUwF5e3bxzWLmikgUNyuSur65ZgP32zUPUaJrDaR6sb9971yYjHXw8SFUThybqwczH5" }
-  ],
-  "lifecycle": ["config created", "pool launched", "5 buys along the curve", "graduation 100.00%", "DAMM v2 migration: pending devnet (fee-config accounts absent on localnet)"]
+ "network": "devnet (solana public devnet)",
+ "preset": "devnet-toy",
+ "token": {
+  "name": "CurveLab Demo",
+  "symbol": "CLAB",
+  "mint": "3xwRKHfWAGnXyRy91QW1gymgt2of8kA2cUzwWxyNviNT"
+ },
+ "config": "FhCHhGgUwy3vspgkb9ppyqzqoxwCnf76KLnYENcoSvpK",
+ "pool": "95NsmiqLb3WVMyPLosbhDCggMKTvBjqgKZZufGR6ekkw",
+ "transactions": [
+  {
+   "step": "create config",
+   "sig": "5obTMkVRiHJUzuwecUg55N4Kq65XtwRtcdXG1kxxNB5mU8Q2Ka5NGR9dqanifZhNtPMTHpMbSDm3AMjKt1x9PAXi",
+   "explorer": "https://explorer.solana.com/tx/{}?cluster=devnet"
+  },
+  {
+   "step": "create pool (CLAB mint)",
+   "sig": "5U7ymv812HyCtiW24CDqQ4ykTp36DCTHV5CCwEoUqdEvWMDkfzWQ5oX1TqNMrUHwJidtsTqVtqaHMLqw9GhuTrEW",
+   "explorer": "https://explorer.solana.com/tx/{}?cluster=devnet"
+  },
+  {
+   "step": "buy 1.03 SOL",
+   "sig": "3dEb7DZL7S4a8fbRQy2yEHjnRcUKKVWbqT38L4YiX6eExXg7UAtU8UsHGo9ZDjwBSdGyutLF7QsPzNKt8sNBt1s2",
+   "explorer": "https://explorer.solana.com/tx/{}?cluster=devnet"
+  },
+  {
+   "step": "buy 0.02 SOL",
+   "sig": "ZjyCXWfgc7xje2pbGZr5ioSRatk2vKTc1Rkmu6TXUuiqgPMpL7PxTsGG1uaoNFgWivBYwDSsnmT6Tc8BugJjP57",
+   "explorer": "https://explorer.solana.com/tx/{}?cluster=devnet"
+  },
+  {
+   "step": "partial-fill buy (100% graduation)",
+   "sig": "ijUG4yxgtJTVXLG7gcSBTyLDt1WmqhApPCivYuGREADoyytUCwNfJajp3Pxh14vCFUhimTGFHuZn2DSjrAkLdQx",
+   "explorer": "https://explorer.solana.com/tx/{}?cluster=devnet"
+  },
+  {
+   "step": "migrate to DAMM v2 (LP split + locks applied)",
+   "sig": "5DhDrtUtvv8SGEPShofr1dN8rnc6Yyh7X5ohC1BpNjHduBVRHe2BbZCTBYsg87X8zWEPj9byWeNxPMuUjNmJ7qsp",
+   "explorer": "https://explorer.solana.com/tx/{}?cluster=devnet"
+  }
+ ],
+ "lifecycle": [
+  "config created on devnet",
+  "CLAB pool launched",
+  "buys along the curve",
+  "graduation 100.00%",
+  "migrated to DAMM v2 \u2014 LP distributed per config (25/25/25/25, 50% permanently locked)"
+ ],
+ "dammV2Pool": "8ug4RWCa6ciS2VGbUHYbUP4NjRrP2RuHYno8sLF5h9zQ"
 }

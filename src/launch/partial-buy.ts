@@ -4,8 +4,8 @@ import { DynamicBondingCurveClient, SwapMode } from '@meteora-ag/dynamic-bonding
 import BN from 'bn.js'
 import fs from 'fs'
 
-const RPC = 'http://localhost:8899'
-const BASE_MINT = new PublicKey('AoaDDezLqgniMF6ZyH2qm3degtVaxLdRsedByAxYx3pQ')
+const RPC = 'https://api.devnet.solana.com'
+const BASE_MINT = new PublicKey('3xwRKHfWAGnXyRy91QW1gymgt2of8kA2cUzwWxyNviNT')
 
 async function main() {
   const keypair = Keypair.fromSecretKey(new Uint8Array(JSON.parse(fs.readFileSync(process.argv[2], 'utf8'))))
