@@ -1,0 +1,7 @@
+{
+  "name": "CurveLab Demo",
+  "symbol": "CLAB",
+  "description": "Demo launch deployed from CurveLab preset devnet-toy",
+  "image": "https://paulcrossland-assistant.github.io/curvelab/clab.jpeg",
+  "external_url": "https://paulcrossland-assistant.github.io/curvelab/"
+}
