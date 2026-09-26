@@ -1,0 +1,16 @@
+{
+  "network": "localnet (solana-test-validator, full Meteora program set)",
+  "preset": "devnet-toy",
+  "token": { "name": "CurveLab Demo", "symbol": "CLAB", "mint": "AoaDDezLqgniMF6ZyH2qm3degtVaxLdRsedByAxYx3pQ" },
+  "config": "9uY7SAsmKtNLNjBPWeJbXUpdWDXkotvJ1LLWKzbvnavr",
+  "pool": "6ozTAtNKhi33jdFpSrtGHymxTNvtQJAzsDiZ8wiy3yFz",
+  "transactions": [
+    { "step": "create config", "sig": "5kRoLU84GBKdtDCJ9E9XcCzRtaWzibANx1pwKGca9B1X5EqZngxSosrSwoQyrZNv9UJGD6mihYYtTXjrtZ8AU7ej" },
+    { "step": "create pool", "sig": "4Z6f4FY1adXAfp6oYiHp5QdNe7Tk9ovWbro3VwxGqZcTBFKru5N74B6SjxDBe7p9JkA2Dxge1LVZopSTJnNXTqsg" },
+    { "step": "buy 1.03 SOL", "sig": "2CBvAXaBN6evJj9prdMy4jVgrtgE6PAvzp2tDeHwSY7mkDRVED94GRkTL1YcowtFZqmY5tpczduYp4q7iuxMS3aw" },
+    { "step": "buy 0.02 SOL", "sig": "3Hfd1EMnHUm7taMdtaG2dAhGQhBGDS3VyfJpNeMZGzGSJaXBg6vxs39DD6WMzYgFoU1m9yuteeDtsk5DoWsE6njX" },
+    { "step": "buy 0.0025 SOL", "sig": "iqPRCgZTFcfzHxhqYb5xuNPzY6eiJJLju9XtUvTxWJkuQ1GweQJbvMxSRzN2ZyqFiBdPSLfUfJ6cU8jpwkWGn3s" },
+    { "step": "final partial-fill buy (graduation 100%)", "sig": "MG8YiQ5nTwxuqyQRVt86fUwF5e3bxzWLmikgUNyuSur65ZgP32zUPUaJrDaR6sb9971yYjHXw8SFUThybqwczH5" }
+  ],
+  "lifecycle": ["config created", "pool launched", "5 buys along the curve", "graduation 100.00%", "DAMM v2 migration: pending devnet (fee-config accounts absent on localnet)"]
+}

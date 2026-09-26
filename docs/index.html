@@ -66,6 +66,7 @@
     </div>
   </section>
 </main>
+<section class="card" style="max-width:1180px;margin:0 auto 1.5rem" id="demoSection"><h2>Live lifecycle demo</h2><p class="usecase" id="demoNet"></p><ol class="rat" id="demoSteps"></ol><pre id="demoTx" style="max-height:200px"></pre></section>
 <footer>
   <p>Simulation is computed off-chain from the official <code>@meteora-ag/dynamic-bonding-curve-sdk</code> quoting engine (<code>buildCurve</code> + <code>getQuoteFromInputAmount</code>), so what you see is what the program will do. Quote units are in the quote token (SOL unless noted). Source: <a href="https://github.com/paulcrossland-assistant/curvelab">github.com/paulcrossland-assistant/curvelab</a></p>
 </footer>
@@ -73,6 +74,7 @@
 const fmt = (n, d=2) => n >= 1e6 ? (n/1e6).toFixed(1)+'M' : n >= 1000 ? (n/1000).toFixed(1)+'k' : Number(n).toFixed(d)
 const fmtInt = n => Math.round(n).toLocaleString('en-US')
 
+fetch('demo.json').then(r=>r.json()).then(d=>{document.getElementById('demoNet').textContent=d.network+' · preset '+d.preset+' · mint '+d.token.mint;document.getElementById('demoSteps').innerHTML=d.lifecycle.map(x=>'<li>'+x+'</li>').join('');document.getElementById('demoTx').textContent=d.transactions.map(t=>t.step+'\n  '+t.sig).join('\n\n')}).catch(()=>{document.getElementById('demoSection').style.display='none'});
 fetch('data.json').then(r => r.json()).then(data => {
   const list = document.getElementById('presetList')
   let active = null
