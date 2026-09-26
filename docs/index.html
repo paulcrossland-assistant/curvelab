@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CurveLab — Meteora DBC Launch Config Studio</title>
+<style>
+  :root {
+    --bg: #0b0e14; --panel: #12161f; --panel2: #171c28; --line: #232a3a;
+    --text: #e6e9f0; --dim: #8b93a7; --accent: #5ee0a0; --accent2: #6aa9ff;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 15px/1.55 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  header { padding: 2rem 1.5rem 1rem; max-width: 1180px; margin: 0 auto; }
+  h1 { font-size: 1.7rem; margin: 0 0 .3rem; letter-spacing: -.02em; }
+  h1 em { color: var(--accent); font-style: normal; }
+  .sub { color: var(--dim); max-width: 720px; }
+  main { max-width: 1180px; margin: 0 auto; padding: 1rem 1.5rem 4rem; display: grid; grid-template-columns: 300px 1fr; gap: 1.25rem; }
+  @media (max-width: 900px) { main { grid-template-columns: 1fr; } }
+  .preset { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: .8rem .95rem; margin-bottom: .7rem; cursor: pointer; transition: border-color .15s, background .15s; }
+  .preset:hover { border-color: #33405a; }
+  .preset.active { border-color: var(--accent); background: var(--panel2); }
+  .preset h3 { margin: 0 0 .15rem; font-size: .98rem; }
+  .preset p { margin: 0; color: var(--dim); font-size: .8rem; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 1.1rem 1.2rem; }
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .7rem; margin-bottom: 1rem; }
+  .metric { background: var(--panel2); border: 1px solid var(--line); border-radius: 10px; padding: .6rem .75rem; }
+  .metric .k { color: var(--dim); font-size: .72rem; text-transform: uppercase; letter-spacing: .06em; }
+  .metric .v { font-size: 1.15rem; font-weight: 650; font-variant-numeric: tabular-nums; margin-top: .15rem; }
+  .metric .v small { color: var(--dim); font-weight: 400; font-size: .72rem; }
+  canvas { width: 100%; height: 340px; display: block; }
+  .row { display: grid; grid-template-columns: 1.6fr 1fr; gap: 1.25rem; margin-top: 1.25rem; }
+  @media (max-width: 900px) { .row { grid-template-columns: 1fr; } }
+  h2 { font-size: 1.05rem; margin: 0 0 .6rem; }
+  .rat { color: var(--dim); font-size: .86rem; }
+  .rat li { margin-bottom: .45rem; }
+  pre { background: #0a0d12; border: 1px solid var(--line); border-radius: 10px; padding: .8rem; overflow: auto; font-size: .72rem; color: #a8e6c8; max-height: 420px; }
+  .usecase { color: var(--accent2); font-size: .88rem; margin-bottom: .8rem; }
+  footer { max-width: 1180px; margin: 0 auto; padding: 0 1.5rem 2rem; color: var(--dim); font-size: .8rem; }
+  a { color: var(--accent2); }
+</style>
+</head>
+<body>
+<header>
+  <h1>Curve<em>Lab</em></h1>
+  <p class="sub">Launch-config studio for Meteora's Dynamic Bonding Curve. Compare curated presets, inspect the full simulated price curve, fees, graduation economics and LP split — before you deploy a single lamport.</p>
+</header>
+<main>
+  <nav id="presetList"></nav>
+  <section>
+    <div class="card">
+      <h2 id="pName"></h2>
+      <p class="usecase" id="pUse"></p>
+      <div class="metrics" id="metrics"></div>
+      <canvas id="chart" width="800" height="340"></canvas>
+    </div>
+    <div class="row">
+      <div class="card">
+        <h2>Why this shape</h2>
+        <ul class="rat" id="pRat"></ul>
+      </div>
+      <div class="card">
+        <h2>buildCurve() params</h2>
+        <pre id="pParams"></pre>
+      </div>
+    </div>
+  </section>
+</main>
+<footer>
+  <p>Simulation is computed off-chain from the official <code>@meteora-ag/dynamic-bonding-curve-sdk</code> quoting engine (<code>buildCurve</code> + <code>getQuoteFromInputAmount</code>), so what you see is what the program will do. Quote units are in the quote token (SOL unless noted). Source: <a href="https://github.com/paulcrossland-assistant/curvelab">github.com/paulcrossland-assistant/curvelab</a></p>
+</footer>
+<script>
+const fmt = (n, d=2) => n >= 1e6 ? (n/1e6).toFixed(1)+'M' : n >= 1000 ? (n/1000).toFixed(1)+'k' : Number(n).toFixed(d)
+const fmtInt = n => Math.round(n).toLocaleString('en-US')
+
+fetch('data.json').then(r => r.json()).then(data => {
+  const list = document.getElementById('presetList')
+  let active = null
+
+  const render = (p) => {
+    active = p
+    document.querySelectorAll('.preset').forEach(el => el.classList.toggle('active', el.dataset.id === p.id))
+    const r = p.result
+    document.getElementById('pName').textContent = p.name
+    document.getElementById('pUse').textContent = p.useCase
+    const m = [
+      ['Migration threshold', `${fmt(r.migrationQuoteThreshold)} <small>quote</small>`],
+      ['Sold on curve', `${fmtInt(r.supplyOnCurve)} <small>of ${fmt(r.totalSupply)}</small>`],
+      ['FDV at start', fmt(r.fdvAtStart)],
+      ['FDV at migration', fmt(r.fdvAtMigration)],
+      ['Price multiple', r.priceMultiple.toFixed(2)+'×'],
+      ['Fee at launch', (r.effectiveFeeBps/100).toFixed(1)+'%'],
+    ]
+    document.getElementById('metrics').innerHTML = m.map(([k,v]) =>
+      `<div class="metric"><div class="k">${k}</div><div class="v">${v}</div></div>`).join('')
+    document.getElementById('pRat').innerHTML = p.rationale.map(x => `<li>${x}</li>`).join('')
+    document.getElementById('pParams').textContent = JSON.stringify(p.params, (k,v) => typeof v === 'bigint' ? v.toString() : v, 2)
+    draw(r.points, r.migrationQuoteThreshold)
+  }
+
+  const draw = (pts, threshold) => {
+    const cv = document.getElementById('chart')
+    const dpr = window.devicePixelRatio || 1
+    const W = cv.clientWidth, H = 340
+    cv.width = W * dpr; cv.height = H * dpr
+    const ctx = cv.getContext('2d'); ctx.scale(dpr, dpr)
+    ctx.clearRect(0,0,W,H)
+    const padL = 64, padR = 18, padT = 16, padB = 36
+    const iw = W - padL - padR, ih = H - padT - padB
+    const xs = pts.map(p => p.quoteIn), ys = pts.map(p => p.fdv)
+    const xMax = Math.max(...xs), yMax = Math.max(...ys)
+    const X = v => padL + (v / xMax) * iw
+    const Y = v => padT + ih - (v / yMax) * ih
+    ctx.strokeStyle = '#232a3a'; ctx.fillStyle = '#8b93a7'; ctx.font = '11px sans-serif'
+    for (let i = 0; i <= 4; i++) {
+      const yv = yMax * i / 4, y = Y(yv)
+      ctx.beginPath(); ctx.moveTo(padL, y); ctx.lineTo(padL+iw, y); ctx.stroke()
+      ctx.fillText(fmt(yv), 6, y+4)
+      const xv = xMax * i / 4
+      ctx.fillText(fmt(xv), X(xv)-10, H-12)
+    }
+    ctx.fillText('quote raised →', padL+iw-90, H-12)
+    ctx.fillText('FDV', 6, padT+4)
+    const grad = ctx.createLinearGradient(0,padT,0,padT+ih)
+    grad.addColorStop(0,'rgba(94,224,160,.28)'); grad.addColorStop(1,'rgba(94,224,160,0)')
+    ctx.beginPath()
+    pts.forEach((p,i) => i ? ctx.lineTo(X(p.quoteIn), Y(p.fdv)) : ctx.moveTo(X(p.quoteIn), Y(p.fdv)))
+    ctx.strokeStyle = '#5ee0a0'; ctx.lineWidth = 2; ctx.stroke()
+    ctx.lineTo(X(xMax), Y(0)); ctx.lineTo(X(0), Y(0)); ctx.closePath()
+    ctx.fillStyle = grad; ctx.fill()
+    const last = pts[pts.length-1]
+    ctx.beginPath(); ctx.arc(X(last.quoteIn), Y(last.fdv), 4, 0, 7); ctx.fillStyle = '#5ee0a0'; ctx.fill()
+    ctx.fillStyle = '#e6e9f0'; ctx.font = '12px sans-serif'
+    ctx.fillText(`graduation @ ${fmt(threshold)} quote`, X(last.quoteIn)-170, Y(last.fdv)-10)
+  }
+
+  data.presets.forEach(p => {
+    const el = document.createElement('div')
+    el.className = 'preset'; el.dataset.id = p.id
+    el.innerHTML = `<h3>${p.name}</h3><p>${p.tagline}</p>`
+    el.onclick = () => render(p)
+    list.appendChild(el)
+  })
+  render(data.presets[0])
+  window.addEventListener('resize', () => active && render(active))
+})
+</script>
+</body>
+</html>

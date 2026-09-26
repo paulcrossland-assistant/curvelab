@@ -1,0 +1,23 @@
+{
+  "name": "curvelab",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@meteora-ag/dynamic-bonding-curve-sdk": "^1.5.11",
+    "@solana/web3.js": "^1.99.0",
+    "bn.js": "^5.2.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3"
+  }
+}

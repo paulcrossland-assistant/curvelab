@@ -1,0 +1,4282 @@
+{
+ "generatedAt": "2026-09-26T05:10:04.259Z",
+ "presets": [
+  {
+   "id": "meme-fair",
+   "name": "Meme Fair Launch",
+   "tagline": "The sane default for a community memecoin",
+   "useCase": "Permissionless meme/community token where early snipers must be taxed and post-graduation LP must be rug-resistant.",
+   "rationale": [
+    "500→100 bps linear fee decay over the first hour prices out bot sniping without punishing organic buyers.",
+    "10 SOL migration threshold keeps graduation achievable on a small community push.",
+    "50% of LP permanently locked kills the classic migrate-and-dump rug vector."
+   ],
+   "params": {
+    "token": {
+     "tokenType": 0,
+     "tokenBaseDecimal": 6,
+     "tokenQuoteDecimal": 9,
+     "tokenAuthorityOption": 1,
+     "totalTokenSupply": 1000000000,
+     "leftover": 0
+    },
+    "fee": {
+     "baseFeeParams": {
+      "baseFeeMode": 0,
+      "feeSchedulerParam": {
+       "startingFeeBps": 500,
+       "endingFeeBps": 100,
+       "numberOfPeriod": 12,
+       "totalDuration": 3600
+      }
+     },
+     "dynamicFeeEnabled": true,
+     "collectFeeMode": 0,
+     "creatorTradingFeePercentage": 50,
+     "poolCreationFee": 0,
+     "enableFirstSwapWithMinFee": false
+    },
+    "migration": {
+     "migrationOption": 1,
+     "migrationFeeOption": 3,
+     "migrationFee": {
+      "feePercentage": 0,
+      "creatorFeePercentage": 0
+     }
+    },
+    "liquidityDistribution": {
+     "partnerLiquidityPercentage": 25,
+     "partnerPermanentLockedLiquidityPercentage": 25,
+     "creatorLiquidityPercentage": 25,
+     "creatorPermanentLockedLiquidityPercentage": 25
+    },
+    "lockedVesting": {
+     "totalLockedVestingAmount": 0,
+     "numberOfVestingPeriod": 0,
+     "cliffUnlockAmount": 0,
+     "totalVestingDuration": 0,
+     "cliffDurationFromMigrationTime": 0
+    },
+    "activationType": 1,
+    "percentageSupplyOnMigration": 20,
+    "migrationQuoteThreshold": 10
+   },
+   "result": {
+    "migrationQuoteThreshold": 10,
+    "supplyOnCurve": 789610356.689744,
+    "totalSupply": 1000000000,
+    "fdvAtStart": 3.4066614582006753,
+    "fdvAtMigration": 48.30705186728424,
+    "avgPriceAtMigration": 1.2664474212221141e-8,
+    "priceMultiple": 14.180173891654904,
+    "effectiveFeeBps": 500.00000000000045,
+    "points": [
+     {
+      "quoteIn": 0.125,
+      "baseOut": 36692815.395288,
+      "marginalPrice": 3.406661458200675e-9,
+      "avgPrice": 3.406661458200675e-9,
+      "fdv": 3.4066614582006753,
+      "pctToMigration": 0.0125
+     },
+     {
+      "quoteIn": 0.25,
+      "baseOut": 70945151.945313,
+      "marginalPrice": 3.6493860737774613e-9,
+      "avgPrice": 3.523848961416119e-9,
+      "fdv": 3.6493860737774613,
+      "pctToMigration": 0.025
+     },
+     {
+      "quoteIn": 0.375,
+      "baseOut": 102992651.582232,
+      "marginalPrice": 3.900460298500134e-9,
+      "avgPrice": 3.6410364646315596e-9,
+      "fdv": 3.900460298500134,
+      "pctToMigration": 0.0375
+     },
+     {
+      "quoteIn": 0.5,
+      "baseOut": 133041565.451576,
+      "marginalPrice": 4.159884132368772e-9,
+      "avgPrice": 3.758223967847013e-9,
+      "fdv": 4.159884132368772,
+      "pctToMigration": 0.05
+     },
+     {
+      "quoteIn": 0.625,
+      "baseOut": 161273197.611879,
+      "marginalPrice": 4.427657575383287e-9,
+      "avgPrice": 3.875411471062467e-9,
+      "fdv": 4.427657575383287,
+      "pctToMigration": 0.0625
+     },
+     {
+      "quoteIn": 0.75,
+      "baseOut": 187847566.167259,
+      "marginalPrice": 4.703780627543588e-9,
+      "avgPrice": 3.992598974277909e-9,
+      "fdv": 4.703780627543588,
+      "pctToMigration": 0.075
+     },
+     {
+      "quoteIn": 0.875,
+      "baseOut": 212906438.03317,
+      "marginalPrice": 4.988253288849947e-9,
+      "avgPrice": 4.109786477493359e-9,
+      "fdv": 4.988253288849947,
+      "pctToMigration": 0.0875
+     },
+     {
+      "quoteIn": 1,
+      "baseOut": 236575858.891924,
+      "marginalPrice": 5.281075559302059e-9,
+      "avgPrice": 4.226973980708803e-9,
+      "fdv": 5.281075559302059,
+      "pctToMigration": 0.1
+     },
+     {
+      "quoteIn": 1.125,
+      "baseOut": 258968273.661812,
+      "marginalPrice": 5.582247438900273e-9,
+      "avgPrice": 4.344161483924256e-9,
+      "fdv": 5.582247438900273,
+      "pctToMigration": 0.1125
+     },
+     {
+      "quoteIn": 1.25,
+      "baseOut": 280184312.772494,
+      "marginalPrice": 5.891768927644183e-9,
+      "avgPrice": 4.461348987139703e-9,
+      "fdv": 5.891768927644184,
+      "pctToMigration": 0.125
+     },
+     {
+      "quoteIn": 1.375,
+      "baseOut": 300314304.122395,
+      "marginalPrice": 6.2096400255340895e-9,
+      "avgPrice": 4.578536490355152e-9,
+      "fdv": 6.20964002553409,
+      "pctToMigration": 0.1375
+     },
+     {
+      "quoteIn": 1.5,
+      "baseOut": 319439558.639691,
+      "marginalPrice": 6.535860732569893e-9,
+      "avgPrice": 4.695723993570601e-9,
+      "fdv": 6.535860732569893,
+      "pctToMigration": 0.15
+     },
+     {
+      "quoteIn": 1.625,
+      "baseOut": 337633468.033879,
+      "marginalPrice": 6.870431048751459e-9,
+      "avgPrice": 4.812911496786046e-9,
+      "fdv": 6.870431048751459,
+      "pctToMigration": 0.1625
+     },
+     {
+      "quoteIn": 1.75,
+      "baseOut": 354962445.987285,
+      "marginalPrice": 7.213350974079291e-9,
+      "avgPrice": 4.930099000001499e-9,
+      "fdv": 7.213350974079291,
+      "pctToMigration": 0.175
+     },
+     {
+      "quoteIn": 1.875,
+      "baseOut": 371486738.231512,
+      "marginalPrice": 7.564620508552831e-9,
+      "avgPrice": 5.047286503216953e-9,
+      "fdv": 7.564620508552831,
+      "pctToMigration": 0.1875
+     },
+     {
+      "quoteIn": 2,
+      "baseOut": 387261122.334817,
+      "marginalPrice": 7.924239652171936e-9,
+      "avgPrice": 5.1644740064324e-9,
+      "fdv": 7.924239652171936,
+      "pctToMigration": 0.2
+     },
+     {
+      "quoteIn": 2.125,
+      "baseOut": 402335514.329786,
+      "marginalPrice": 8.292208404937196e-9,
+      "avgPrice": 5.281661509647846e-9,
+      "fdv": 8.292208404937195,
+      "pctToMigration": 0.2125
+     },
+     {
+      "quoteIn": 2.25,
+      "baseOut": 416755496.336191,
+      "marginalPrice": 8.668526766848816e-9,
+      "avgPrice": 5.398849012863301e-9,
+      "fdv": 8.668526766848816,
+      "pctToMigration": 0.225
+     },
+     {
+      "quoteIn": 2.375,
+      "baseOut": 430562776.92816,
+      "marginalPrice": 9.0531947379056e-9,
+      "avgPrice": 5.5160365160787504e-9,
+      "fdv": 9.053194737905601,
+      "pctToMigration": 0.2375
+     },
+     {
+      "quoteIn": 2.5,
+      "baseOut": 443795594.039456,
+      "marginalPrice": 9.44621231810841e-9,
+      "avgPrice": 5.633224019294196e-9,
+      "fdv": 9.44621231810841,
+      "pctToMigration": 0.25
+     },
+     {
+      "quoteIn": 2.625,
+      "baseOut": 456489068.603976,
+      "marginalPrice": 9.847579507457486e-9,
+      "avgPrice": 5.7504115225096465e-9,
+      "fdv": 9.847579507457487,
+      "pctToMigration": 0.2625
+     },
+     {
+      "quoteIn": 2.75,
+      "baseOut": 468675515.818869,
+      "marginalPrice": 1.025729630595193e-8,
+      "avgPrice": 5.867599025725091e-9,
+      "fdv": 10.25729630595193,
+      "pctToMigration": 0.275
+     },
+     {
+      "quoteIn": 2.875,
+      "baseOut": 480384719.838779,
+      "marginalPrice": 1.0675362713592979e-8,
+      "avgPrice": 5.984786528940541e-9,
+      "fdv": 10.675362713592978,
+      "pctToMigration": 0.2875
+     },
+     {
+      "quoteIn": 3,
+      "baseOut": 491644176.817321,
+      "marginalPrice": 1.1101778730379417e-8,
+      "avgPrice": 6.1019740321559885e-9,
+      "fdv": 11.101778730379417,
+      "pctToMigration": 0.3
+     },
+     {
+      "quoteIn": 3.125,
+      "baseOut": 502479310.470806,
+      "marginalPrice": 1.153654435631213e-8,
+      "avgPrice": 6.2191615353714394e-9,
+      "fdv": 11.53654435631213,
+      "pctToMigration": 0.3125
+     },
+     {
+      "quoteIn": 3.25,
+      "baseOut": 512913663.721531,
+      "marginalPrice": 1.1979659591390113e-8,
+      "avgPrice": 6.336349038586885e-9,
+      "fdv": 11.979659591390114,
+      "pctToMigration": 0.325
+     },
+     {
+      "quoteIn": 3.375,
+      "baseOut": 522969069.461166,
+      "marginalPrice": 1.243112443561494e-8,
+      "avgPrice": 6.453536541802338e-9,
+      "fdv": 12.43112443561494,
+      "pctToMigration": 0.3375
+     },
+     {
+      "quoteIn": 3.5,
+      "baseOut": 532665803.040968,
+      "marginalPrice": 1.2890938888985408e-8,
+      "avgPrice": 6.570724045017792e-9,
+      "fdv": 12.890938888985408,
+      "pctToMigration": 0.35
+     },
+     {
+      "quoteIn": 3.625,
+      "baseOut": 542022718.730128,
+      "marginalPrice": 1.335910295150057e-8,
+      "avgPrice": 6.687911548233239e-9,
+      "fdv": 13.359102951500569,
+      "pctToMigration": 0.3625
+     },
+     {
+      "quoteIn": 3.75,
+      "baseOut": 551057372.074796,
+      "marginalPrice": 1.3835616623162717e-8,
+      "avgPrice": 6.805099051448687e-9,
+      "fdv": 13.835616623162718,
+      "pctToMigration": 0.375
+     },
+     {
+      "quoteIn": 3.875,
+      "baseOut": 559786129.828601,
+      "marginalPrice": 1.4320479903971442e-8,
+      "avgPrice": 6.922286554664141e-9,
+      "fdv": 14.320479903971442,
+      "pctToMigration": 0.3875
+     },
+     {
+      "quoteIn": 4,
+      "baseOut": 568224268.902963,
+      "marginalPrice": 1.4813692793923352e-8,
+      "avgPrice": 7.039474057879582e-9,
+      "fdv": 14.813692793923352,
+      "pctToMigration": 0.4
+     },
+     {
+      "quoteIn": 4.125,
+      "baseOut": 576386065.595763,
+      "marginalPrice": 1.5315255293025245e-8,
+      "avgPrice": 7.156661561095038e-9,
+      "fdv": 15.315255293025245,
+      "pctToMigration": 0.4125
+     },
+     {
+      "quoteIn": 4.25,
+      "baseOut": 584284876.194757,
+      "marginalPrice": 1.582516740126923e-8,
+      "avgPrice": 7.273849064310484e-9,
+      "fdv": 15.825167401269232,
+      "pctToMigration": 0.425
+     },
+     {
+      "quoteIn": 4.375,
+      "baseOut": 591933209.913002,
+      "marginalPrice": 1.6343429118660664e-8,
+      "avgPrice": 7.39103656752593e-9,
+      "fdv": 16.343429118660666,
+      "pctToMigration": 0.4375
+     },
+     {
+      "quoteIn": 4.5,
+      "baseOut": 599342794.994084,
+      "marginalPrice": 1.687004044519951e-8,
+      "avgPrice": 7.508224070741383e-9,
+      "fdv": 16.87004044519951,
+      "pctToMigration": 0.45
+     },
+     {
+      "quoteIn": 4.625,
+      "baseOut": 606524638.721905,
+      "marginalPrice": 1.7405001380881566e-8,
+      "avgPrice": 7.625411573956831e-9,
+      "fdv": 17.405001380881565,
+      "pctToMigration": 0.4625
+     },
+     {
+      "quoteIn": 4.75,
+      "baseOut": 613489081.980824,
+      "marginalPrice": 1.7948311925711935e-8,
+      "avgPrice": 7.742599077172285e-9,
+      "fdv": 17.948311925711934,
+      "pctToMigration": 0.475
+     },
+     {
+      "quoteIn": 4.875,
+      "baseOut": 620245848.934935,
+      "marginalPrice": 1.8499972079686273e-8,
+      "avgPrice": 7.859786580387735e-9,
+      "fdv": 18.499972079686273,
+      "pctToMigration": 0.4875
+     },
+     {
+      "quoteIn": 5,
+      "baseOut": 626804092.328392,
+      "marginalPrice": 1.9059981842806935e-8,
+      "avgPrice": 7.976974083603183e-9,
+      "fdv": 19.059981842806934,
+      "pctToMigration": 0.5
+     },
+     {
+      "quoteIn": 5.125,
+      "baseOut": 633172434.850582,
+      "marginalPrice": 1.9628341215072463e-8,
+      "avgPrice": 8.094161586818627e-9,
+      "fdv": 19.628341215072464,
+      "pctToMigration": 0.5125
+     },
+     {
+      "quoteIn": 5.25,
+      "baseOut": 639359006.959259,
+      "marginalPrice": 2.020505019648606e-8,
+      "avgPrice": 8.211349090034072e-9,
+      "fdv": 20.205050196486063,
+      "pctToMigration": 0.525
+     },
+     {
+      "quoteIn": 5.375,
+      "baseOut": 645371481.510517,
+      "marginalPrice": 2.079010878704621e-8,
+      "avgPrice": 8.328536593249525e-9,
+      "fdv": 20.79010878704621,
+      "pctToMigration": 0.5375
+     },
+     {
+      "quoteIn": 5.5,
+      "baseOut": 651217105.50574,
+      "marginalPrice": 2.138351698674908e-8,
+      "avgPrice": 8.44572409646497e-9,
+      "fdv": 21.38351698674908,
+      "pctToMigration": 0.55
+     },
+     {
+      "quoteIn": 5.625,
+      "baseOut": 656902729.231717,
+      "marginalPrice": 2.1985274795602416e-8,
+      "avgPrice": 8.562911599680427e-9,
+      "fdv": 21.985274795602415,
+      "pctToMigration": 0.5625
+     },
+     {
+      "quoteIn": 5.75,
+      "baseOut": 662434833.04029,
+      "marginalPrice": 2.25953822135965e-8,
+      "avgPrice": 8.680099102895876e-9,
+      "fdv": 22.5953822135965,
+      "pctToMigration": 0.575
+     },
+     {
+      "quoteIn": 5.875,
+      "baseOut": 667819551.987625,
+      "marginalPrice": 2.3213839240739718e-8,
+      "avgPrice": 8.797286606111326e-9,
+      "fdv": 23.213839240739716,
+      "pctToMigration": 0.5875
+     },
+     {
+      "quoteIn": 6,
+      "baseOut": 673062698.530079,
+      "marginalPrice": 2.3840645877026156e-8,
+      "avgPrice": 8.914474109326773e-9,
+      "fdv": 23.840645877026155,
+      "pctToMigration": 0.6
+     },
+     {
+      "quoteIn": 6.125,
+      "baseOut": 678169783.453163,
+      "marginalPrice": 2.4475802122459345e-8,
+      "avgPrice": 9.031661612542216e-9,
+      "fdv": 24.475802122459346,
+      "pctToMigration": 0.6125
+     },
+     {
+      "quoteIn": 6.25,
+      "baseOut": 683146035.192034,
+      "marginalPrice": 2.511930797704383e-8,
+      "avgPrice": 9.148849115757673e-9,
+      "fdv": 25.119307977043828,
+      "pctToMigration": 0.625
+     },
+     {
+      "quoteIn": 6.375,
+      "baseOut": 687996417.685913,
+      "marginalPrice": 2.5771163440769117e-8,
+      "avgPrice": 9.266036618973126e-9,
+      "fdv": 25.77116344076912,
+      "pctToMigration": 0.6375
+     },
+     {
+      "quoteIn": 6.5,
+      "baseOut": 692725646.89459,
+      "marginalPrice": 2.643136851363719e-8,
+      "avgPrice": 9.383224122188571e-9,
+      "fdv": 26.431368513637192,
+      "pctToMigration": 0.65
+     },
+     {
+      "quoteIn": 6.625,
+      "baseOut": 697338206.092545,
+      "marginalPrice": 2.7099923195656547e-8,
+      "avgPrice": 9.500411625404021e-9,
+      "fdv": 27.099923195656547,
+      "pctToMigration": 0.6625
+     },
+     {
+      "quoteIn": 6.75,
+      "baseOut": 701838360.044947,
+      "marginalPrice": 2.7776827486819685e-8,
+      "avgPrice": 9.61759912861947e-9,
+      "fdv": 27.776827486819684,
+      "pctToMigration": 0.675
+     },
+     {
+      "quoteIn": 6.875,
+      "baseOut": 706230168.159744,
+      "marginalPrice": 2.8462081387127706e-8,
+      "avgPrice": 9.734786631834915e-9,
+      "fdv": 28.462081387127707,
+      "pctToMigration": 0.6875
+     },
+     {
+      "quoteIn": 7,
+      "baseOut": 710517496.701103,
+      "marginalPrice": 2.915568489658573e-8,
+      "avgPrice": 9.851974135050365e-9,
+      "fdv": 29.15568489658573,
+      "pctToMigration": 0.7
+     },
+     {
+      "quoteIn": 7.125,
+      "baseOut": 714704030.141438,
+      "marginalPrice": 2.9857638015187247e-8,
+      "avgPrice": 9.969161638265817e-9,
+      "fdv": 29.857638015187245,
+      "pctToMigration": 0.7125
+     },
+     {
+      "quoteIn": 7.25,
+      "baseOut": 718793281.72208,
+      "marginalPrice": 3.0567940742930726e-8,
+      "avgPrice": 1.0086349141481262e-8,
+      "fdv": 30.567940742930727,
+      "pctToMigration": 0.725
+     },
+     {
+      "quoteIn": 7.375,
+      "baseOut": 722788603.28621,
+      "marginalPrice": 3.12865930798291e-8,
+      "avgPrice": 1.0203536644696715e-8,
+      "fdv": 31.286593079829096,
+      "pctToMigration": 0.7375
+     },
+     {
+      "quoteIn": 7.5,
+      "baseOut": 726693194.441905,
+      "marginalPrice": 3.2013595025865896e-8,
+      "avgPrice": 1.0320724147912166e-8,
+      "fdv": 32.0135950258659,
+      "pctToMigration": 0.75
+     },
+     {
+      "quoteIn": 7.625,
+      "baseOut": 730510111.107931,
+      "marginalPrice": 3.274894658104874e-8,
+      "avgPrice": 1.0437911651127612e-8,
+      "fdv": 32.74894658104874,
+      "pctToMigration": 0.7625
+     },
+     {
+      "quoteIn": 7.75,
+      "baseOut": 734242273.490263,
+      "marginalPrice": 3.3492647745379244e-8,
+      "avgPrice": 1.0555099154343059e-8,
+      "fdv": 33.492647745379244,
+      "pctToMigration": 0.775
+     },
+     {
+      "quoteIn": 7.875,
+      "baseOut": 737892473.533086,
+      "marginalPrice": 3.4244698518859445e-8,
+      "avgPrice": 1.0672286657558511e-8,
+      "fdv": 34.244698518859444,
+      "pctToMigration": 0.7875
+     },
+     {
+      "quoteIn": 8,
+      "baseOut": 741463381.884232,
+      "marginalPrice": 3.500509890148275e-8,
+      "avgPrice": 1.0789474160773964e-8,
+      "fdv": 35.005098901482754,
+      "pctToMigration": 0.8
+     },
+     {
+      "quoteIn": 8.125,
+      "baseOut": 744957554.411572,
+      "marginalPrice": 3.577384889324877e-8,
+      "avgPrice": 1.0906661663989414e-8,
+      "fdv": 35.77384889324877,
+      "pctToMigration": 0.8125
+     },
+     {
+      "quoteIn": 8.25,
+      "baseOut": 748377438.303777,
+      "marginalPrice": 3.655094849416223e-8,
+      "avgPrice": 1.1023849167204863e-8,
+      "fdv": 36.55094849416223,
+      "pctToMigration": 0.825
+     },
+     {
+      "quoteIn": 8.375,
+      "baseOut": 751725377.786055,
+      "marginalPrice": 3.7336397704222565e-8,
+      "avgPrice": 1.1141036670420311e-8,
+      "fdv": 37.33639770422256,
+      "pctToMigration": 0.8375
+     },
+     {
+      "quoteIn": 8.5,
+      "baseOut": 755003619.478914,
+      "marginalPrice": 3.813019652342464e-8,
+      "avgPrice": 1.1258224173635755e-8,
+      "fdv": 38.13019652342464,
+      "pctToMigration": 0.85
+     },
+     {
+      "quoteIn": 8.625,
+      "baseOut": 758214317.425693,
+      "marginalPrice": 3.8932344951788627e-8,
+      "avgPrice": 1.1375411676851211e-8,
+      "fdv": 38.93234495178863,
+      "pctToMigration": 0.8625
+     },
+     {
+      "quoteIn": 8.75,
+      "baseOut": 761359537.812512,
+      "marginalPrice": 3.974284298927039e-8,
+      "avgPrice": 1.149259918006665e-8,
+      "fdv": 39.742842989270386,
+      "pctToMigration": 0.875
+     },
+     {
+      "quoteIn": 8.875,
+      "baseOut": 764441263.402354,
+      "marginalPrice": 4.056169063593047e-8,
+      "avgPrice": 1.1609786683282108e-8,
+      "fdv": 40.56169063593047,
+      "pctToMigration": 0.8875
+     },
+     {
+      "quoteIn": 9,
+      "baseOut": 767461397.703306,
+      "marginalPrice": 4.1388887891707173e-8,
+      "avgPrice": 1.1726974186497552e-8,
+      "fdv": 41.38888789170717,
+      "pctToMigration": 0.9
+     },
+     {
+      "quoteIn": 9.125,
+      "baseOut": 770421768.889336,
+      "marginalPrice": 4.222443475665284e-8,
+      "avgPrice": 1.1844161689713005e-8,
+      "fdv": 42.22443475665284,
+      "pctToMigration": 0.9125
+     },
+     {
+      "quoteIn": 9.25,
+      "baseOut": 773324133.49061,
+      "marginalPrice": 4.3068331230724895e-8,
+      "avgPrice": 1.1961349192928449e-8,
+      "fdv": 43.068331230724894,
+      "pctToMigration": 0.925
+     },
+     {
+      "quoteIn": 9.375,
+      "baseOut": 776170179.868973,
+      "marginalPrice": 4.3920577313956985e-8,
+      "avgPrice": 1.2078536696143897e-8,
+      "fdv": 43.92057731395698,
+      "pctToMigration": 0.9375
+     },
+     {
+      "quoteIn": 9.5,
+      "baseOut": 778961531.493066,
+      "marginalPrice": 4.478117300632785e-8,
+      "avgPrice": 1.2195724199359344e-8,
+      "fdv": 44.78117300632785,
+      "pctToMigration": 0.95
+     },
+     {
+      "quoteIn": 9.625,
+      "baseOut": 781699750.026412,
+      "marginalPrice": 4.565011830785182e-8,
+      "avgPrice": 1.2312911702574794e-8,
+      "fdv": 45.65011830785182,
+      "pctToMigration": 0.9625
+     },
+     {
+      "quoteIn": 9.75,
+      "baseOut": 784386338.240825,
+      "marginalPrice": 4.652741321851939e-8,
+      "avgPrice": 1.2430099205790247e-8,
+      "fdv": 46.52741321851939,
+      "pctToMigration": 0.975
+     },
+     {
+      "quoteIn": 9.875,
+      "baseOut": 787022742.766555,
+      "marginalPrice": 4.741305773832013e-8,
+      "avgPrice": 1.2547286709005691e-8,
+      "fdv": 47.41305773832013,
+      "pctToMigration": 0.9875
+     },
+     {
+      "quoteIn": 10,
+      "baseOut": 789610356.689744,
+      "marginalPrice": 4.830705186728424e-8,
+      "avgPrice": 1.2664474212221141e-8,
+      "fdv": 48.30705186728424,
+      "pctToMigration": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "devnet-toy",
+   "name": "Devnet Toy Launch",
+   "tagline": "Tiny thresholds for end-to-end rehearsals",
+   "useCase": "Devnet/localnet rehearsal of the full lifecycle: launch → trade → graduate → migrate, on airdrop-sized budgets.",
+   "rationale": [
+    "1 SOL threshold graduates inside a single devnet airdrop, so the whole lifecycle is testable without capital.",
+    "Same shape as meme-fair so rehearsal results transfer to production configs."
+   ],
+   "params": {
+    "token": {
+     "tokenType": 0,
+     "tokenBaseDecimal": 6,
+     "tokenQuoteDecimal": 9,
+     "tokenAuthorityOption": 1,
+     "totalTokenSupply": 1000000000,
+     "leftover": 0
+    },
+    "fee": {
+     "baseFeeParams": {
+      "baseFeeMode": 0,
+      "feeSchedulerParam": {
+       "startingFeeBps": 250,
+       "endingFeeBps": 100,
+       "numberOfPeriod": 10,
+       "totalDuration": 1800
+      }
+     },
+     "dynamicFeeEnabled": true,
+     "collectFeeMode": 0,
+     "creatorTradingFeePercentage": 50,
+     "poolCreationFee": 0,
+     "enableFirstSwapWithMinFee": false
+    },
+    "migration": {
+     "migrationOption": 1,
+     "migrationFeeOption": 3,
+     "migrationFee": {
+      "feePercentage": 0,
+      "creatorFeePercentage": 0
+     }
+    },
+    "liquidityDistribution": {
+     "partnerLiquidityPercentage": 25,
+     "partnerPermanentLockedLiquidityPercentage": 25,
+     "creatorLiquidityPercentage": 25,
+     "creatorPermanentLockedLiquidityPercentage": 25
+    },
+    "lockedVesting": {
+     "totalLockedVestingAmount": 0,
+     "numberOfVestingPeriod": 0,
+     "cliffUnlockAmount": 0,
+     "totalVestingDuration": 0,
+     "cliffDurationFromMigrationTime": 0
+    },
+    "activationType": 1,
+    "percentageSupplyOnMigration": 20,
+    "migrationQuoteThreshold": 1
+   },
+   "result": {
+    "migrationQuoteThreshold": 1,
+    "supplyOnCurve": 794904354.476481,
+    "totalSupply": 1000000000,
+    "fdvAtStart": 0.33223165496436863,
+    "fdvAtMigration": 4.8917042369064,
+    "avgPriceAtMigration": 1.2580129852963174e-9,
+    "priceMultiple": 14.723775305008274,
+    "effectiveFeeBps": 250.00000000000023,
+    "points": [
+     {
+      "quoteIn": 0.0125,
+      "baseOut": 37624349.796953,
+      "marginalPrice": 3.322316549643686e-10,
+      "avgPrice": 3.322316549643686e-10,
+      "fdv": 0.33223165496436863,
+      "pctToMigration": 0.0125
+     },
+     {
+      "quoteIn": 0.025,
+      "baseOut": 72684897.488867,
+      "marginalPrice": 3.56526090517487e-10,
+      "avgPrice": 3.4395040598123156e-10,
+      "fdv": 0.356526090517487,
+      "pctToMigration": 0.025
+     },
+     {
+      "quoteIn": 0.0375,
+      "baseOut": 105435063.069586,
+      "marginalPrice": 3.8167745958997906e-10,
+      "avgPrice": 3.5566915699808903e-10,
+      "fdv": 0.38167745958997906,
+      "pctToMigration": 0.0375
+     },
+     {
+      "quoteIn": 0.05,
+      "baseOut": 136095932.689122,
+      "marginalPrice": 4.0768576218188723e-10,
+      "avgPrice": 3.6738790801495017e-10,
+      "fdv": 0.40768576218188723,
+      "pctToMigration": 0.05
+     },
+     {
+      "quoteIn": 0.0625,
+      "baseOut": 164861256.089822,
+      "marginalPrice": 4.345509982931675e-10,
+      "avgPrice": 3.7910665903180966e-10,
+      "fdv": 0.43455099829316746,
+      "pctToMigration": 0.0625
+     },
+     {
+      "quoteIn": 0.075,
+      "baseOut": 191901544.965206,
+      "marginalPrice": 4.622731679238572e-10,
+      "avgPrice": 3.9082541004867044e-10,
+      "fdv": 0.4622731679238572,
+      "pctToMigration": 0.075
+     },
+     {
+      "quoteIn": 0.0875,
+      "baseOut": 217367455.457281,
+      "marginalPrice": 4.908522710739129e-10,
+      "avgPrice": 4.0254416106552936e-10,
+      "fdv": 0.4908522710739129,
+      "pctToMigration": 0.0875
+     },
+     {
+      "quoteIn": 0.1,
+      "baseOut": 241392596.545335,
+      "marginalPrice": 5.202883077433986e-10,
+      "avgPrice": 4.1426291208239024e-10,
+      "fdv": 0.5202883077433986,
+      "pctToMigration": 0.1
+     },
+     {
+      "quoteIn": 0.1125,
+      "baseOut": 264095874.882268,
+      "marginalPrice": 5.505812779322434e-10,
+      "avgPrice": 4.2598166309925014e-10,
+      "fdv": 0.5505812779322433,
+      "pctToMigration": 0.1125
+     },
+     {
+      "quoteIn": 0.125,
+      "baseOut": 285583462.954735,
+      "marginalPrice": 5.817311816404754e-10,
+      "avgPrice": 4.377004141161091e-10,
+      "fdv": 0.5817311816404754,
+      "pctToMigration": 0.125
+     },
+     {
+      "quoteIn": 0.1375,
+      "baseOut": 305950459.320794,
+      "marginalPrice": 6.137380188681573e-10,
+      "avgPrice": 4.4941916513297025e-10,
+      "fdv": 0.6137380188681573,
+      "pctToMigration": 0.1375
+     },
+     {
+      "quoteIn": 0.15,
+      "baseOut": 325282295.701018,
+      "marginalPrice": 6.466017896151442e-10,
+      "avgPrice": 4.611379161498293e-10,
+      "fdv": 0.6466017896151443,
+      "pctToMigration": 0.15
+     },
+     {
+      "quoteIn": 0.1625,
+      "baseOut": 343655934.838952,
+      "marginalPrice": 6.803224938816087e-10,
+      "avgPrice": 4.728566671666899e-10,
+      "fdv": 0.6803224938816087,
+      "pctToMigration": 0.1625
+     },
+     {
+      "quoteIn": 0.175,
+      "baseOut": 361140894.550521,
+      "marginalPrice": 7.149001316674064e-10,
+      "avgPrice": 4.845754181835498e-10,
+      "fdv": 0.7149001316674064,
+      "pctToMigration": 0.175
+     },
+     {
+      "quoteIn": 0.1875,
+      "baseOut": 377800126.691162,
+      "marginalPrice": 7.503347029726345e-10,
+      "avgPrice": 4.962941692004103e-10,
+      "fdv": 0.7503347029726345,
+      "pctToMigration": 0.1875
+     },
+     {
+      "quoteIn": 0.2,
+      "baseOut": 393690774.467828,
+      "marginalPrice": 7.866262077972151e-10,
+      "avgPrice": 5.080129202172702e-10,
+      "fdv": 0.7866262077972151,
+      "pctToMigration": 0.2
+     },
+     {
+      "quoteIn": 0.2125,
+      "baseOut": 408864827.297147,
+      "marginalPrice": 8.237746461411901e-10,
+      "avgPrice": 5.197316712341297e-10,
+      "fdv": 0.8237746461411901,
+      "pctToMigration": 0.2125
+     },
+     {
+      "quoteIn": 0.225,
+      "baseOut": 423369689.023858,
+      "marginalPrice": 8.617800180046511e-10,
+      "avgPrice": 5.314504222509909e-10,
+      "fdv": 0.8617800180046511,
+      "pctToMigration": 0.225
+     },
+     {
+      "quoteIn": 0.2375,
+      "baseOut": 437248672.584154,
+      "marginalPrice": 9.006423233873615e-10,
+      "avgPrice": 5.431691732678505e-10,
+      "fdv": 0.9006423233873615,
+      "pctToMigration": 0.2375
+     },
+     {
+      "quoteIn": 0.25,
+      "baseOut": 450541431.987852,
+      "marginalPrice": 9.403615622895112e-10,
+      "avgPrice": 5.548879242847099e-10,
+      "fdv": 0.9403615622895112,
+      "pctToMigration": 0.25
+     },
+     {
+      "quoteIn": 0.2625,
+      "baseOut": 463284340.694163,
+      "marginalPrice": 9.809377347111705e-10,
+      "avgPrice": 5.66606675301571e-10,
+      "fdv": 0.9809377347111705,
+      "pctToMigration": 0.2625
+     },
+     {
+      "quoteIn": 0.275,
+      "baseOut": 475510823.984735,
+      "marginalPrice": 1.0223708406520244e-9,
+      "avgPrice": 5.783254263184305e-10,
+      "fdv": 1.0223708406520244,
+      "pctToMigration": 0.275
+     },
+     {
+      "quoteIn": 0.2875,
+      "baseOut": 487251651.729509,
+      "marginalPrice": 1.0646608801124683e-9,
+      "avgPrice": 5.900441773352913e-10,
+      "fdv": 1.0646608801124684,
+      "pctToMigration": 0.2875
+     },
+     {
+      "quoteIn": 0.3,
+      "baseOut": 498535196.944602,
+      "marginalPrice": 1.1078078530921158e-9,
+      "avgPrice": 6.017629283521509e-10,
+      "fdv": 1.1078078530921158,
+      "pctToMigration": 0.3
+     },
+     {
+      "quoteIn": 0.3125,
+      "baseOut": 509387664.716276,
+      "marginalPrice": 1.1518117595913308e-9,
+      "avgPrice": 6.134816793690116e-10,
+      "fdv": 1.1518117595913309,
+      "pctToMigration": 0.3125
+     },
+     {
+      "quoteIn": 0.325,
+      "baseOut": 519833295.37923,
+      "marginalPrice": 1.1966725996097014e-9,
+      "avgPrice": 6.252004303858706e-10,
+      "fdv": 1.1966725996097014,
+      "pctToMigration": 0.325
+     },
+     {
+      "quoteIn": 0.3375,
+      "baseOut": 529894545.265069,
+      "marginalPrice": 1.2423903731477259e-9,
+      "avgPrice": 6.369191814027308e-10,
+      "fdv": 1.242390373147726,
+      "pctToMigration": 0.3375
+     },
+     {
+      "quoteIn": 0.35,
+      "baseOut": 539592247.85761,
+      "marginalPrice": 1.2889650802051172e-9,
+      "avgPrice": 6.486379324195916e-10,
+      "fdv": 1.2889650802051171,
+      "pctToMigration": 0.35
+     },
+     {
+      "quoteIn": 0.3625,
+      "baseOut": 548945757.788919,
+      "marginalPrice": 1.3363967207816593e-9,
+      "avgPrice": 6.603566834364512e-10,
+      "fdv": 1.3363967207816594,
+      "pctToMigration": 0.3625
+     },
+     {
+      "quoteIn": 0.375,
+      "baseOut": 557973079.770483,
+      "marginalPrice": 1.384685294877928e-9,
+      "avgPrice": 6.720754344533123e-10,
+      "fdv": 1.384685294877928,
+      "pctToMigration": 0.375
+     },
+     {
+      "quoteIn": 0.3875,
+      "baseOut": 566690984.266791,
+      "marginalPrice": 1.4338308024931632e-9,
+      "avgPrice": 6.837941854701713e-10,
+      "fdv": 1.4338308024931632,
+      "pctToMigration": 0.3875
+     },
+     {
+      "quoteIn": 0.4,
+      "baseOut": 575115111.474937,
+      "marginalPrice": 1.483833243628223e-9,
+      "avgPrice": 6.955129364870317e-10,
+      "fdv": 1.483833243628223,
+      "pctToMigration": 0.4
+     },
+     {
+      "quoteIn": 0.4125,
+      "baseOut": 583260064.966659,
+      "marginalPrice": 1.5346926182824936e-9,
+      "avgPrice": 7.072316875038922e-10,
+      "fdv": 1.5346926182824936,
+      "pctToMigration": 0.4125
+     },
+     {
+      "quoteIn": 0.425,
+      "baseOut": 591139496.172284,
+      "marginalPrice": 1.586408926456058e-9,
+      "avgPrice": 7.18950438520752e-10,
+      "fdv": 1.5864089264560581,
+      "pctToMigration": 0.425
+     },
+     {
+      "quoteIn": 0.4375,
+      "baseOut": 598766180.734762,
+      "marginalPrice": 1.6389821681491834e-9,
+      "avgPrice": 7.306691895376123e-10,
+      "fdv": 1.6389821681491834,
+      "pctToMigration": 0.4375
+     },
+     {
+      "quoteIn": 0.45,
+      "baseOut": 606152087.632115,
+      "marginalPrice": 1.6924123433616172e-9,
+      "avgPrice": 7.423879405544725e-10,
+      "fdv": 1.6924123433616172,
+      "pctToMigration": 0.45
+     },
+     {
+      "quoteIn": 0.4625,
+      "baseOut": 613308441.854943,
+      "marginalPrice": 1.7466994520934002e-9,
+      "avgPrice": 7.541066915713325e-10,
+      "fdv": 1.7466994520934003,
+      "pctToMigration": 0.4625
+     },
+     {
+      "quoteIn": 0.475,
+      "baseOut": 620245781.329339,
+      "marginalPrice": 1.8018434943445357e-9,
+      "avgPrice": 7.65825442588192e-10,
+      "fdv": 1.8018434943445356,
+      "pctToMigration": 0.475
+     },
+     {
+      "quoteIn": 0.4875,
+      "baseOut": 626974008.692324,
+      "marginalPrice": 1.8578444701152783e-9,
+      "avgPrice": 7.775441936050521e-10,
+      "fdv": 1.8578444701152783,
+      "pctToMigration": 0.4875
+     },
+     {
+      "quoteIn": 0.5,
+      "baseOut": 633502438.454803,
+      "marginalPrice": 1.914702379405483e-9,
+      "avgPrice": 7.892629446219129e-10,
+      "fdv": 1.914702379405483,
+      "pctToMigration": 0.5
+     },
+     {
+      "quoteIn": 0.512499999,
+      "baseOut": 639839839.512034,
+      "marginalPrice": 1.9724172238929553e-9,
+      "avgPrice": 8.009816947173089e-10,
+      "fdv": 1.9724172238929554,
+      "pctToMigration": 0.512499999
+     },
+     {
+      "quoteIn": 0.525,
+      "baseOut": 645994477.006187,
+      "marginalPrice": 2.030988991939075e-9,
+      "avgPrice": 8.127004466556327e-10,
+      "fdv": 2.0309889919390747,
+      "pctToMigration": 0.525
+     },
+     {
+      "quoteIn": 0.5375,
+      "baseOut": 651974143.151293,
+      "marginalPrice": 2.09041770839168e-9,
+      "avgPrice": 8.244191976724928e-10,
+      "fdv": 2.09041770839168,
+      "pctToMigration": 0.5375
+     },
+     {
+      "quoteIn": 0.55,
+      "baseOut": 657786195.282878,
+      "marginalPrice": 2.150703351759372e-9,
+      "avgPrice": 8.361379486893533e-10,
+      "fdv": 2.150703351759372,
+      "pctToMigration": 0.55
+     },
+     {
+      "quoteIn": 0.5625,
+      "baseOut": 663437583.491301,
+      "marginalPrice": 2.2118459286463105e-9,
+      "avgPrice": 8.478566997062137e-10,
+      "fdv": 2.2118459286463104,
+      "pctToMigration": 0.5625
+     },
+     {
+      "quoteIn": 0.575,
+      "baseOut": 668934878.859454,
+      "marginalPrice": 2.27384543905261e-9,
+      "avgPrice": 8.595754507230738e-10,
+      "fdv": 2.27384543905261,
+      "pctToMigration": 0.575
+     },
+     {
+      "quoteIn": 0.5875,
+      "baseOut": 674284298.950676,
+      "marginalPrice": 2.3367018829782693e-9,
+      "avgPrice": 8.712942017399337e-10,
+      "fdv": 2.3367018829782693,
+      "pctToMigration": 0.5875
+     },
+     {
+      "quoteIn": 0.6,
+      "baseOut": 679491731.267114,
+      "marginalPrice": 2.400415260423403e-9,
+      "avgPrice": 8.830129527567935e-10,
+      "fdv": 2.400415260423403,
+      "pctToMigration": 0.6
+     },
+     {
+      "quoteIn": 0.6125,
+      "baseOut": 684562754.864611,
+      "marginalPrice": 2.4649855713883797e-9,
+      "avgPrice": 8.947317037736545e-10,
+      "fdv": 2.4649855713883797,
+      "pctToMigration": 0.6125
+     },
+     {
+      "quoteIn": 0.625,
+      "baseOut": 689502660.290949,
+      "marginalPrice": 2.5304128158717474e-9,
+      "avgPrice": 9.06450454790514e-10,
+      "fdv": 2.5304128158717476,
+      "pctToMigration": 0.625
+     },
+     {
+      "quoteIn": 0.6375,
+      "baseOut": 694316467.997232,
+      "marginalPrice": 2.5966969938755504e-9,
+      "avgPrice": 9.181692058073747e-10,
+      "fdv": 2.5966969938755504,
+      "pctToMigration": 0.6375
+     },
+     {
+      "quoteIn": 0.65,
+      "baseOut": 699008945.357125,
+      "marginalPrice": 2.663838105397886e-9,
+      "avgPrice": 9.298879568242345e-10,
+      "fdv": 2.663838105397886,
+      "pctToMigration": 0.65
+     },
+     {
+      "quoteIn": 0.6625,
+      "baseOut": 703584622.415204,
+      "marginalPrice": 2.7318361504401713e-9,
+      "avgPrice": 9.416067078410946e-10,
+      "fdv": 2.7318361504401714,
+      "pctToMigration": 0.6625
+     },
+     {
+      "quoteIn": 0.675,
+      "baseOut": 708047806.473796,
+      "marginalPrice": 2.800691129001645e-9,
+      "avgPrice": 9.533254588579548e-10,
+      "fdv": 2.800691129001645,
+      "pctToMigration": 0.675
+     },
+     {
+      "quoteIn": 0.6875,
+      "baseOut": 712402595.617026,
+      "marginalPrice": 2.870403041082413e-9,
+      "avgPrice": 9.650442098748148e-10,
+      "fdv": 2.8704030410824126,
+      "pctToMigration": 0.6875
+     },
+     {
+      "quoteIn": 0.7,
+      "baseOut": 716652891.261334,
+      "marginalPrice": 2.940971886682766e-9,
+      "avgPrice": 9.767629608916746e-10,
+      "fdv": 2.9409718866827657,
+      "pctToMigration": 0.7
+     },
+     {
+      "quoteIn": 0.7125,
+      "baseOut": 720802409.813251,
+      "marginalPrice": 3.0123976658027162e-9,
+      "avgPrice": 9.884817119085353e-10,
+      "fdv": 3.012397665802716,
+      "pctToMigration": 0.7125
+     },
+     {
+      "quoteIn": 0.725,
+      "baseOut": 724854693.507653,
+      "marginalPrice": 3.084680378441435e-9,
+      "avgPrice": 1.0002004629253953e-9,
+      "fdv": 3.084680378441435,
+      "pctToMigration": 0.725
+     },
+     {
+      "quoteIn": 0.7375,
+      "baseOut": 728813120.492922,
+      "marginalPrice": 3.1578200246001936e-9,
+      "avgPrice": 1.0119192139422557e-9,
+      "fdv": 3.1578200246001935,
+      "pctToMigration": 0.7375
+     },
+     {
+      "quoteIn": 0.75,
+      "baseOut": 732680914.223375,
+      "marginalPrice": 3.231816604277885e-9,
+      "avgPrice": 1.0236379649591157e-9,
+      "fdv": 3.2318166042778853,
+      "pctToMigration": 0.75
+     },
+     {
+      "quoteIn": 0.7625,
+      "baseOut": 736461152.213836,
+      "marginalPrice": 3.3066701174746956e-9,
+      "avgPrice": 1.035356715975975e-9,
+      "fdv": 3.3066701174746957,
+      "pctToMigration": 0.7625
+     },
+     {
+      "quoteIn": 0.775,
+      "baseOut": 740156774.206327,
+      "marginalPrice": 3.3823805641914512e-9,
+      "avgPrice": 1.0470754669928349e-9,
+      "fdv": 3.3823805641914513,
+      "pctToMigration": 0.775
+     },
+     {
+      "quoteIn": 0.7875,
+      "baseOut": 743770589.794427,
+      "marginalPrice": 3.4589479444278158e-9,
+      "avgPrice": 1.0587942180096949e-9,
+      "fdv": 3.4589479444278157,
+      "pctToMigration": 0.7875
+     },
+     {
+      "quoteIn": 0.8,
+      "baseOut": 747305285.546853,
+      "marginalPrice": 3.536372258184074e-9,
+      "avgPrice": 1.0705129690265563e-9,
+      "fdv": 3.5363722581840737,
+      "pctToMigration": 0.8
+     },
+     {
+      "quoteIn": 0.8125,
+      "baseOut": 750763431.668224,
+      "marginalPrice": 3.61465350545805e-9,
+      "avgPrice": 1.0822317200434165e-9,
+      "fdv": 3.6146535054580498,
+      "pctToMigration": 0.8125
+     },
+     {
+      "quoteIn": 0.825,
+      "baseOut": 754147488.231707,
+      "marginalPrice": 3.6937916862519816e-9,
+      "avgPrice": 1.0939504710602761e-9,
+      "fdv": 3.6937916862519815,
+      "pctToMigration": 0.825
+     },
+     {
+      "quoteIn": 0.8375,
+      "baseOut": 757459811.015317,
+      "marginalPrice": 3.773786800565598e-9,
+      "avgPrice": 1.1056692220771361e-9,
+      "fdv": 3.773786800565598,
+      "pctToMigration": 0.8375
+     },
+     {
+      "quoteIn": 0.85,
+      "baseOut": 760702656.970961,
+      "marginalPrice": 3.854638848399298e-9,
+      "avgPrice": 1.1173879730939968e-9,
+      "fdv": 3.8546388483992984,
+      "pctToMigration": 0.85
+     },
+     {
+      "quoteIn": 0.8625,
+      "baseOut": 763878189.352913,
+      "marginalPrice": 3.936347829750717e-9,
+      "avgPrice": 1.1291067241108564e-9,
+      "fdv": 3.9363478297507166,
+      "pctToMigration": 0.8625
+     },
+     {
+      "quoteIn": 0.875,
+      "baseOut": 766988482.530199,
+      "marginalPrice": 4.018913744622355e-9,
+      "avgPrice": 1.1408254751277157e-9,
+      "fdv": 4.018913744622355,
+      "pctToMigration": 0.875
+     },
+     {
+      "quoteIn": 0.8875,
+      "baseOut": 770035526.505402,
+      "marginalPrice": 4.102336593014716e-9,
+      "avgPrice": 1.1525442261445764e-9,
+      "fdv": 4.102336593014716,
+      "pctToMigration": 0.8875
+     },
+     {
+      "quoteIn": 0.9,
+      "baseOut": 773021231.160566,
+      "marginalPrice": 4.186616374925217e-9,
+      "avgPrice": 1.1642629771614372e-9,
+      "fdv": 4.186616374925217,
+      "pctToMigration": 0.9
+     },
+     {
+      "quoteIn": 0.9125,
+      "baseOut": 775947430.249232,
+      "marginalPrice": 4.271753090353851e-9,
+      "avgPrice": 1.1759817281782964e-9,
+      "fdv": 4.271753090353851,
+      "pctToMigration": 0.9125
+     },
+     {
+      "quoteIn": 0.925,
+      "baseOut": 778815885.152143,
+      "marginalPrice": 4.35774673930376e-9,
+      "avgPrice": 1.1877004791951564e-9,
+      "fdv": 4.35774673930376,
+      "pctToMigration": 0.925
+     },
+     {
+      "quoteIn": 0.9375,
+      "baseOut": 781628288.412786,
+      "marginalPrice": 4.4445973217731425e-9,
+      "avgPrice": 1.1994192302120168e-9,
+      "fdv": 4.444597321773142,
+      "pctToMigration": 0.9375
+     },
+     {
+      "quoteIn": 0.95,
+      "baseOut": 784386267.067676,
+      "marginalPrice": 4.532304837761253e-9,
+      "avgPrice": 1.2111379812288772e-9,
+      "fdv": 4.532304837761253,
+      "pctToMigration": 0.95
+     },
+     {
+      "quoteIn": 0.9625,
+      "baseOut": 787091385.785152,
+      "marginalPrice": 4.620869287268506e-9,
+      "avgPrice": 1.2228567322457374e-9,
+      "fdv": 4.620869287268506,
+      "pctToMigration": 0.9625
+     },
+     {
+      "quoteIn": 0.975,
+      "baseOut": 789745149.825412,
+      "marginalPrice": 4.710290670294454e-9,
+      "avgPrice": 1.2345754832625968e-9,
+      "fdv": 4.710290670294454,
+      "pctToMigration": 0.975
+     },
+     {
+      "quoteIn": 0.9875,
+      "baseOut": 792349007.833548,
+      "marginalPrice": 4.800568986843003e-9,
+      "avgPrice": 1.2462942342794583e-9,
+      "fdv": 4.800568986843003,
+      "pctToMigration": 0.9875
+     },
+     {
+      "quoteIn": 1,
+      "baseOut": 794904354.476481,
+      "marginalPrice": 4.8917042369064e-9,
+      "avgPrice": 1.2580129852963174e-9,
+      "fdv": 4.8917042369064,
+      "pctToMigration": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "stock-pair",
+   "name": "Tokenized Stock Pair",
+   "tagline": "Patient price discovery for thinly traded equities",
+   "useCase": "xStocks/RWA-style equity token where reference pricing exists off-chain and the curve should track, not hype.",
+   "rationale": [
+    "Low, flat fee (25 bps floor) — arbitrary fee drag breaks arbitrage against the reference market.",
+    "High migration threshold (200 SOL) — equity buyers arrive slowly; premature graduation strands the price discovery phase.",
+    "Only 15% of supply on curve; the rest can be distributed to market makers post-migration."
+   ],
+   "params": {
+    "token": {
+     "tokenType": 0,
+     "tokenBaseDecimal": 6,
+     "tokenQuoteDecimal": 9,
+     "tokenAuthorityOption": 1,
+     "totalTokenSupply": 100000000,
+     "leftover": 0
+    },
+    "fee": {
+     "baseFeeParams": {
+      "baseFeeMode": 0,
+      "feeSchedulerParam": {
+       "startingFeeBps": 100,
+       "endingFeeBps": 25,
+       "numberOfPeriod": 24,
+       "totalDuration": 86400
+      }
+     },
+     "dynamicFeeEnabled": true,
+     "collectFeeMode": 0,
+     "creatorTradingFeePercentage": 50,
+     "poolCreationFee": 0,
+     "enableFirstSwapWithMinFee": false
+    },
+    "migration": {
+     "migrationOption": 1,
+     "migrationFeeOption": 3,
+     "migrationFee": {
+      "feePercentage": 0,
+      "creatorFeePercentage": 0
+     }
+    },
+    "liquidityDistribution": {
+     "partnerLiquidityPercentage": 40,
+     "partnerPermanentLockedLiquidityPercentage": 0,
+     "creatorLiquidityPercentage": 40,
+     "creatorPermanentLockedLiquidityPercentage": 20
+    },
+    "lockedVesting": {
+     "totalLockedVestingAmount": 0,
+     "numberOfVestingPeriod": 0,
+     "cliffUnlockAmount": 0,
+     "totalVestingDuration": 0,
+     "cliffDurationFromMigrationTime": 0
+    },
+    "activationType": 1,
+    "percentageSupplyOnMigration": 15,
+    "migrationQuoteThreshold": 200
+   },
+   "result": {
+    "migrationQuoteThreshold": 200,
+    "supplyOnCurve": 84848754.249445,
+    "totalSupply": 100000000,
+    "fdvAtStart": 44.36405598353962,
+    "fdvAtMigration": 1311.0976198200751,
+    "avgPriceAtMigration": 0.0000023571353730430074,
+    "priceMultiple": 29.553150422191585,
+    "effectiveFeeBps": 100.00000000000009,
+    "points": [
+     {
+      "quoteIn": 2.5,
+      "baseOut": 5635192.600351,
+      "marginalPrice": 4.4364055983539623e-7,
+      "avgPrice": 4.4364055983539623e-7,
+      "fdv": 44.36405598353962,
+      "pctToMigration": 0.0125
+     },
+     {
+      "quoteIn": 5,
+      "baseOut": 10686911.651906,
+      "marginalPrice": 4.948810443507265e-7,
+      "avgPrice": 4.6786201316713e-7,
+      "fdv": 49.48810443507264,
+      "pctToMigration": 0.025
+     },
+     {
+      "quoteIn": 7.5,
+      "baseOut": 15241316.789938,
+      "marginalPrice": 5.489191067179135e-7,
+      "avgPrice": 4.920834664988621e-7,
+      "fdv": 54.89191067179135,
+      "pctToMigration": 0.0375
+     },
+     {
+      "quoteIn": 10,
+      "baseOut": 19368399.594722,
+      "marginalPrice": 6.057547469370058e-7,
+      "avgPrice": 5.163049198306017e-7,
+      "fdv": 60.57547469370058,
+      "pctToMigration": 0.05
+     },
+     {
+      "quoteIn": 12.5,
+      "baseOut": 23125606.114035,
+      "marginalPrice": 6.653879650078755e-7,
+      "avgPrice": 5.405263731623325e-7,
+      "fdv": 66.53879650078756,
+      "pctToMigration": 0.0625
+     },
+     {
+      "quoteIn": 15,
+      "baseOut": 26560527.188071,
+      "marginalPrice": 7.278187609308071e-7,
+      "avgPrice": 5.647478264940794e-7,
+      "fdv": 72.78187609308071,
+      "pctToMigration": 0.075
+     },
+     {
+      "quoteIn": 17.5,
+      "baseOut": 29712924.934175,
+      "marginalPrice": 7.93047134705547e-7,
+      "avgPrice": 5.889692798258301e-7,
+      "fdv": 79.30471347055469,
+      "pctToMigration": 0.0875
+     },
+     {
+      "quoteIn": 20,
+      "baseOut": 32616278.946376,
+      "marginalPrice": 8.610730863318931e-7,
+      "avgPrice": 6.131907331575665e-7,
+      "fdv": 86.10730863318932,
+      "pctToMigration": 0.1
+     },
+     {
+      "quoteIn": 22.5,
+      "baseOut": 35298979.964478,
+      "marginalPrice": 9.318966158102622e-7,
+      "avgPrice": 6.374121864893024e-7,
+      "fdv": 93.18966158102621,
+      "pctToMigration": 0.1125
+     },
+     {
+      "quoteIn": 25,
+      "baseOut": 37785261.352131,
+      "marginalPrice": 0.000001005517723140722,
+      "avgPrice": 6.616336398210478e-7,
+      "fdv": 100.5517723140722,
+      "pctToMigration": 0.125
+     },
+     {
+      "quoteIn": 27.5,
+      "baseOut": 40095933.200096,
+      "marginalPrice": 0.00000108193640832286,
+      "avgPrice": 6.858550931527928e-7,
+      "fdv": 108.19364083228601,
+      "pctToMigration": 0.1375
+     },
+     {
+      "quoteIn": 30,
+      "baseOut": 42248966.183329,
+      "marginalPrice": 0.0000011611526713566629,
+      "avgPrice": 7.100765464845311e-7,
+      "fdv": 116.11526713566629,
+      "pctToMigration": 0.15
+     },
+     {
+      "quoteIn": 32.5,
+      "baseOut": 44259959.863886,
+      "marginalPrice": 0.0000012431665122426238,
+      "avgPrice": 7.342979998162728e-7,
+      "fdv": 124.31665122426237,
+      "pctToMigration": 0.1625
+     },
+     {
+      "quoteIn": 35,
+      "baseOut": 46142521.269221,
+      "marginalPrice": 0.0000013279779309802249,
+      "avgPrice": 7.585194531480115e-7,
+      "fdv": 132.79779309802248,
+      "pctToMigration": 0.175
+     },
+     {
+      "quoteIn": 37.5,
+      "baseOut": 47908573.181194,
+      "marginalPrice": 0.0000014155869275705762,
+      "avgPrice": 7.82740906479766e-7,
+      "fdv": 141.55869275705763,
+      "pctToMigration": 0.1875
+     },
+     {
+      "quoteIn": 40,
+      "baseOut": 49568606.904222,
+      "marginalPrice": 0.000001505993502011427,
+      "avgPrice": 8.069623598115082e-7,
+      "fdv": 150.5993502011427,
+      "pctToMigration": 0.2
+     },
+     {
+      "quoteIn": 42.5,
+      "baseOut": 51131890.838057,
+      "marginalPrice": 0.0000015991976543039608,
+      "avgPrice": 8.311838131432378e-7,
+      "fdv": 159.91976543039607,
+      "pctToMigration": 0.2125
+     },
+     {
+      "quoteIn": 45,
+      "baseOut": 52606643.615183,
+      "marginalPrice": 0.0000016951993844500442,
+      "avgPrice": 8.554052664749815e-7,
+      "fdv": 169.5199384450044,
+      "pctToMigration": 0.225
+     },
+     {
+      "quoteIn": 47.5,
+      "baseOut": 54000178.633087,
+      "marginalPrice": 0.0000017939986924478037,
+      "avgPrice": 8.796267198067339e-7,
+      "fdv": 179.39986924478038,
+      "pctToMigration": 0.2375
+     },
+     {
+      "quoteIn": 50,
+      "baseOut": 55319025.347347,
+      "marginalPrice": 0.000001895595578294894,
+      "avgPrice": 9.038481731384646e-7,
+      "fdv": 189.5595578294894,
+      "pctToMigration": 0.25
+     },
+     {
+      "quoteIn": 52.5,
+      "baseOut": 56569031.57113,
+      "marginalPrice": 0.000001999990041996779,
+      "avgPrice": 9.280696264702076e-7,
+      "fdv": 199.99900419967793,
+      "pctToMigration": 0.2625
+     },
+     {
+      "quoteIn": 55,
+      "baseOut": 57755450.16282,
+      "marginalPrice": 0.0000021071820835501825,
+      "avgPrice": 9.522910798019576e-7,
+      "fdv": 210.71820835501825,
+      "pctToMigration": 0.275
+     },
+     {
+      "quoteIn": 57.5,
+      "baseOut": 58883012.81242,
+      "marginalPrice": 0.000002217171702953139,
+      "avgPrice": 9.765125331336937e-7,
+      "fdv": 221.71717029531388,
+      "pctToMigration": 0.2875
+     },
+     {
+      "quoteIn": 60,
+      "baseOut": 59955993.112534,
+      "marginalPrice": 0.000002329958900209434,
+      "avgPrice": 0.0000010007339864654298,
+      "fdv": 232.99589002094342,
+      "pctToMigration": 0.3
+     },
+     {
+      "quoteIn": 62.5,
+      "baseOut": 60978260.686501,
+      "marginalPrice": 0.000002445543675320289,
+      "avgPrice": 0.0000010249554397971846,
+      "fdv": 244.5543675320289,
+      "pctToMigration": 0.3125
+     },
+     {
+      "quoteIn": 65,
+      "baseOut": 61953327.81887,
+      "marginalPrice": 0.0000025639260282787387,
+      "avgPrice": 0.0000010491768931289277,
+      "fdv": 256.3926028278739,
+      "pctToMigration": 0.325
+     },
+     {
+      "quoteIn": 67.5,
+      "baseOut": 62884389.77251,
+      "marginalPrice": 0.0000026851059590892066,
+      "avgPrice": 0.000001073398346460662,
+      "fdv": 268.51059590892066,
+      "pctToMigration": 0.3375
+     },
+     {
+      "quoteIn": 70,
+      "baseOut": 63774359.767598,
+      "marginalPrice": 0.0000028090834677553266,
+      "avgPrice": 0.0000010976197997924093,
+      "fdv": 280.90834677553266,
+      "pctToMigration": 0.35
+     },
+     {
+      "quoteIn": 72.5,
+      "baseOut": 64625899.429263,
+      "marginalPrice": 0.0000029358585542707375,
+      "avgPrice": 0.0000011218412531241547,
+      "fdv": 293.58585542707374,
+      "pctToMigration": 0.3625
+     },
+     {
+      "quoteIn": 75,
+      "baseOut": 65441445.374252,
+      "marginalPrice": 0.0000030654312186344483,
+      "avgPrice": 0.000001146062706455882,
+      "fdv": 306.5431218634448,
+      "pctToMigration": 0.375
+     },
+     {
+      "quoteIn": 77.5,
+      "baseOut": 66223232.495998,
+      "marginalPrice": 0.000003197801460858842,
+      "avgPrice": 0.0000011702841597876314,
+      "fdv": 319.7801460858842,
+      "pctToMigration": 0.3875
+     },
+     {
+      "quoteIn": 80,
+      "baseOut": 66973314.416736,
+      "marginalPrice": 0.000003332969280929048,
+      "avgPrice": 0.0000011945056131193763,
+      "fdv": 333.2969280929048,
+      "pctToMigration": 0.4
+     },
+     {
+      "quoteIn": 82.5,
+      "baseOut": 67693581.500768,
+      "marginalPrice": 0.000003470934678848808,
+      "avgPrice": 0.0000012187270664511082,
+      "fdv": 347.0934678848808,
+      "pctToMigration": 0.4125
+     },
+     {
+      "quoteIn": 85,
+      "baseOut": 68385776.761574,
+      "marginalPrice": 0.0000036116976546314294,
+      "avgPrice": 0.0000012429485197828672,
+      "fdv": 361.16976546314294,
+      "pctToMigration": 0.425
+     },
+     {
+      "quoteIn": 87.5,
+      "baseOut": 69051509.944583,
+      "marginalPrice": 0.00000375525820825159,
+      "avgPrice": 0.0000012671699731146033,
+      "fdv": 375.525820825159,
+      "pctToMigration": 0.4375
+     },
+     {
+      "quoteIn": 90,
+      "baseOut": 69692270.025102,
+      "marginalPrice": 0.000003901616339730526,
+      "avgPrice": 0.0000012913914264463403,
+      "fdv": 390.16163397305263,
+      "pctToMigration": 0.45
+     },
+     {
+      "quoteIn": 92.5,
+      "baseOut": 70309436.325679,
+      "marginalPrice": 0.000004050772049061501,
+      "avgPrice": 0.0000013156128797780785,
+      "fdv": 405.07720490615014,
+      "pctToMigration": 0.4625
+     },
+     {
+      "quoteIn": 95,
+      "baseOut": 70904288.427585,
+      "marginalPrice": 0.000004202725336246773,
+      "avgPrice": 0.0000013398343331098244,
+      "fdv": 420.2725336246773,
+      "pctToMigration": 0.475
+     },
+     {
+      "quoteIn": 97.5,
+      "baseOut": 71478015.026313,
+      "marginalPrice": 0.000004357476201282466,
+      "avgPrice": 0.0000013640557864415736,
+      "fdv": 435.7476201282466,
+      "pctToMigration": 0.4875
+     },
+     {
+      "quoteIn": 100,
+      "baseOut": 72031721.860058,
+      "marginalPrice": 0.000004515024644162846,
+      "avgPrice": 0.0000013882772397733085,
+      "fdv": 451.5024644162846,
+      "pctToMigration": 0.5
+     },
+     {
+      "quoteIn": 102.5,
+      "baseOut": 72566438.822451,
+      "marginalPrice": 0.000004675370664906224,
+      "avgPrice": 0.0000014124986931050556,
+      "fdv": 467.5370664906224,
+      "pctToMigration": 0.5125
+     },
+     {
+      "quoteIn": 105,
+      "baseOut": 73083126.355825,
+      "marginalPrice": 0.000004838514263494606,
+      "avgPrice": 0.0000014367201464367992,
+      "fdv": 483.8514263494606,
+      "pctToMigration": 0.525
+     },
+     {
+      "quoteIn": 107.5,
+      "baseOut": 73582681.208497,
+      "marginalPrice": 0.000005004455439934406,
+      "avgPrice": 0.0000014609415997685387,
+      "fdv": 500.4455439934406,
+      "pctToMigration": 0.5375
+     },
+     {
+      "quoteIn": 110,
+      "baseOut": 74065941.628682,
+      "marginalPrice": 0.000005173194194225466,
+      "avgPrice": 0.0000014851630531002734,
+      "fdv": 517.3194194225466,
+      "pctToMigration": 0.55
+     },
+     {
+      "quoteIn": 112.5,
+      "baseOut": 74533692.058318,
+      "marginalPrice": 0.000005344730526373805,
+      "avgPrice": 0.0000015093845064320135,
+      "fdv": 534.4730526373805,
+      "pctToMigration": 0.5625
+     },
+     {
+      "quoteIn": 115,
+      "baseOut": 74986667.382092,
+      "marginalPrice": 0.000005519064436382711,
+      "avgPrice": 0.000001533605959763773,
+      "fdv": 551.9064436382711,
+      "pctToMigration": 0.575
+     },
+     {
+      "quoteIn": 117.5,
+      "baseOut": 75425556.78008,
+      "marginalPrice": 0.000005696195924213958,
+      "avgPrice": 0.000001557827413095503,
+      "fdv": 569.6195924213957,
+      "pctToMigration": 0.5875
+     },
+     {
+      "quoteIn": 120,
+      "baseOut": 75851007.226469,
+      "marginalPrice": 0.000005876124989922441,
+      "avgPrice": 0.0000015820488664272443,
+      "fdv": 587.6124989922441,
+      "pctToMigration": 0.6
+     },
+     {
+      "quoteIn": 122.5,
+      "baseOut": 76263626.671742,
+      "marginalPrice": 0.0000060588516334848475,
+      "avgPrice": 0.0000016062703197589995,
+      "fdv": 605.8851633484848,
+      "pctToMigration": 0.6125
+     },
+     {
+      "quoteIn": 125,
+      "baseOut": 76663986.941223,
+      "marginalPrice": 0.000006244375854879166,
+      "avgPrice": 0.0000016304917730907397,
+      "fdv": 624.4375854879165,
+      "pctToMigration": 0.625
+     },
+     {
+      "quoteIn": 127.5,
+      "baseOut": 77052626.379048,
+      "marginalPrice": 0.000006432697654131701,
+      "avgPrice": 0.0000016547132264224745,
+      "fdv": 643.2697654131701,
+      "pctToMigration": 0.6375
+     },
+     {
+      "quoteIn": 130,
+      "baseOut": 77430052.263279,
+      "marginalPrice": 0.000006623817031239677,
+      "avgPrice": 0.000001678934679754209,
+      "fdv": 662.3817031239677,
+      "pctToMigration": 0.65
+     },
+     {
+      "quoteIn": 132.5,
+      "baseOut": 77796743.014936,
+      "marginalPrice": 0.000006817733986207871,
+      "avgPrice": 0.0000017031561330859527,
+      "fdv": 681.7733986207871,
+      "pctToMigration": 0.6625
+     },
+     {
+      "quoteIn": 135,
+      "baseOut": 78153150.221179,
+      "marginalPrice": 0.000007014448519022185,
+      "avgPrice": 0.0000017273775864176986,
+      "fdv": 701.4448519022185,
+      "pctToMigration": 0.675
+     },
+     {
+      "quoteIn": 137.5,
+      "baseOut": 78499700.490626,
+      "marginalPrice": 0.0000072139606296922556,
+      "avgPrice": 0.0000017515990397494506,
+      "fdv": 721.3960629692256,
+      "pctToMigration": 0.6875
+     },
+     {
+      "quoteIn": 140,
+      "baseOut": 78836797.156839,
+      "marginalPrice": 0.000007416270318201255,
+      "avgPrice": 0.0000017758204930811952,
+      "fdv": 741.6270318201255,
+      "pctToMigration": 0.7
+     },
+     {
+      "quoteIn": 142.5,
+      "baseOut": 79164821.844274,
+      "marginalPrice": 0.000007621377584561775,
+      "avgPrice": 0.0000018000419464129324,
+      "fdv": 762.1377584561775,
+      "pctToMigration": 0.7125
+     },
+     {
+      "quoteIn": 145,
+      "baseOut": 79484135.909483,
+      "marginalPrice": 0.00000782928242877015,
+      "avgPrice": 0.000001824263399744659,
+      "fdv": 782.928242877015,
+      "pctToMigration": 0.725
+     },
+     {
+      "quoteIn": 147.5,
+      "baseOut": 79795081.769005,
+      "marginalPrice": 0.00000803998485087762,
+      "avgPrice": 0.0000018484848530764184,
+      "fdv": 803.998485087762,
+      "pctToMigration": 0.7375
+     },
+     {
+      "quoteIn": 150,
+      "baseOut": 80097984.124216,
+      "marginalPrice": 0.000008253484850781291,
+      "avgPrice": 0.00000187270630640816,
+      "fdv": 825.3484850781291,
+      "pctToMigration": 0.75
+     },
+     {
+      "quoteIn": 152.5,
+      "baseOut": 80393151.092328,
+      "marginalPrice": 0.000008469782428538729,
+      "avgPrice": 0.000001896927759739887,
+      "fdv": 846.9782428538729,
+      "pctToMigration": 0.7625
+     },
+     {
+      "quoteIn": 155,
+      "baseOut": 80680875.251838,
+      "marginalPrice": 0.00000868887758420265,
+      "avgPrice": 0.0000019211492130716436,
+      "fdv": 868.887758420265,
+      "pctToMigration": 0.775
+     },
+     {
+      "quoteIn": 157.5,
+      "baseOut": 80961434.609882,
+      "marginalPrice": 0.000008910770317659265,
+      "avgPrice": 0.0000019453706664033822,
+      "fdv": 891.0770317659266,
+      "pctToMigration": 0.7875
+     },
+     {
+      "quoteIn": 160,
+      "baseOut": 81235093.4982,
+      "marginalPrice": 0.000009135460628981665,
+      "avgPrice": 0.000001969592119735115,
+      "fdv": 913.5460628981665,
+      "pctToMigration": 0.8
+     },
+     {
+      "quoteIn": 162.5,
+      "baseOut": 81502103.403802,
+      "marginalPrice": 0.000009362948518196091,
+      "avgPrice": 0.00000199381357306687,
+      "fdv": 936.2948518196091,
+      "pctToMigration": 0.8125
+     },
+     {
+      "quoteIn": 165,
+      "baseOut": 81762703.739815,
+      "marginalPrice": 0.000009593233985221687,
+      "avgPrice": 0.0000020180350263986186,
+      "fdv": 959.3233985221686,
+      "pctToMigration": 0.825
+     },
+     {
+      "quoteIn": 167.5,
+      "baseOut": 82017122.56147,
+      "marginalPrice": 0.000009826317030074246,
+      "avgPrice": 0.0000020422564797303454,
+      "fdv": 982.6317030074247,
+      "pctToMigration": 0.8375
+     },
+     {
+      "quoteIn": 170,
+      "baseOut": 82265577.231737,
+      "marginalPrice": 0.00001006219765284905,
+      "avgPrice": 0.0000020664779330620946,
+      "fdv": 1006.2197652849051,
+      "pctToMigration": 0.85
+     },
+     {
+      "quoteIn": 172.5,
+      "baseOut": 82508275.040698,
+      "marginalPrice": 0.000010300875853402091,
+      "avgPrice": 0.000002090699386393822,
+      "fdv": 1030.0875853402092,
+      "pctToMigration": 0.8625
+     },
+     {
+      "quoteIn": 175,
+      "baseOut": 82745413.782346,
+      "marginalPrice": 0.000010542351631902595,
+      "avgPrice": 0.0000021149208397255826,
+      "fdv": 1054.2351631902595,
+      "pctToMigration": 0.875
+     },
+     {
+      "quoteIn": 177.5,
+      "baseOut": 82977182.292213,
+      "marginalPrice": 0.000010786624988160156,
+      "avgPrice": 0.000002139142293057323,
+      "fdv": 1078.6624988160156,
+      "pctToMigration": 0.8875
+     },
+     {
+      "quoteIn": 180,
+      "baseOut": 83203760.948867,
+      "marginalPrice": 0.000011033695922284752,
+      "avgPrice": 0.000002163363746389052,
+      "fdv": 1103.3695922284753,
+      "pctToMigration": 0.9
+     },
+     {
+      "quoteIn": 182.5,
+      "baseOut": 83425322.142101,
+      "marginalPrice": 0.000011283564434316418,
+      "avgPrice": 0.0000021875851997207986,
+      "fdv": 1128.3564434316418,
+      "pctToMigration": 0.9125
+     },
+     {
+      "quoteIn": 185,
+      "baseOut": 83642030.71036,
+      "marginalPrice": 0.00001153623052417617,
+      "avgPrice": 0.0000022118066530525504,
+      "fdv": 1153.623052417617,
+      "pctToMigration": 0.925
+     },
+     {
+      "quoteIn": 187.5,
+      "baseOut": 83854044.349734,
+      "marginalPrice": 0.000011791694191853614,
+      "avgPrice": 0.0000022360281063842903,
+      "fdv": 1179.1694191853614,
+      "pctToMigration": 0.9375
+     },
+     {
+      "quoteIn": 190,
+      "baseOut": 84061513.996654,
+      "marginalPrice": 0.000012049955437403672,
+      "avgPrice": 0.0000022602495597160286,
+      "fdv": 1204.995543740367,
+      "pctToMigration": 0.95
+     },
+     {
+      "quoteIn": 192.5,
+      "baseOut": 84264584.186245,
+      "marginalPrice": 0.000012311014260809631,
+      "avgPrice": 0.0000022844710130477677,
+      "fdv": 1231.1014260809632,
+      "pctToMigration": 0.9625
+     },
+     {
+      "quoteIn": 195,
+      "baseOut": 84463393.388119,
+      "marginalPrice": 0.0000125748706620954,
+      "avgPrice": 0.000002308692466379519,
+      "fdv": 1257.48706620954,
+      "pctToMigration": 0.975
+     },
+     {
+      "quoteIn": 197.5,
+      "baseOut": 84658074.321253,
+      "marginalPrice": 0.000012841524641137703,
+      "avgPrice": 0.000002332913919711242,
+      "fdv": 1284.1524641137703,
+      "pctToMigration": 0.9875
+     },
+     {
+      "quoteIn": 200,
+      "baseOut": 84848754.249445,
+      "marginalPrice": 0.00001311097619820075,
+      "avgPrice": 0.0000023571353730430074,
+      "fdv": 1311.0976198200751,
+      "pctToMigration": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "long-tail-rwa",
+   "name": "Long-Curve RWA",
+   "tagline": "Wide, slow curve for illiquid real-world assets",
+   "useCase": "Tokenized real estate, carbon credits, invoices — assets with no price history and multi-month discovery horizons.",
+   "rationale": [
+    "A 5%-of-supply, 500 SOL long curve means each buy moves the price gently — wide price exploration with bounded slippage.",
+    "Day-scale fee decay rewards genuinely early conviction without locking the door behind them.",
+    "Creator LP vesting is left to a companion lock; the curve itself stays simple."
+   ],
+   "params": {
+    "token": {
+     "tokenType": 0,
+     "tokenBaseDecimal": 6,
+     "tokenQuoteDecimal": 9,
+     "tokenAuthorityOption": 1,
+     "totalTokenSupply": 10000000,
+     "leftover": 0
+    },
+    "fee": {
+     "baseFeeParams": {
+      "baseFeeMode": 0,
+      "feeSchedulerParam": {
+       "startingFeeBps": 200,
+       "endingFeeBps": 50,
+       "numberOfPeriod": 30,
+       "totalDuration": 604800
+      }
+     },
+     "dynamicFeeEnabled": true,
+     "collectFeeMode": 0,
+     "creatorTradingFeePercentage": 50,
+     "poolCreationFee": 0,
+     "enableFirstSwapWithMinFee": false
+    },
+    "migration": {
+     "migrationOption": 1,
+     "migrationFeeOption": 3,
+     "migrationFee": {
+      "feePercentage": 0,
+      "creatorFeePercentage": 0
+     }
+    },
+    "liquidityDistribution": {
+     "partnerLiquidityPercentage": 30,
+     "partnerPermanentLockedLiquidityPercentage": 20,
+     "creatorLiquidityPercentage": 30,
+     "creatorPermanentLockedLiquidityPercentage": 20
+    },
+    "lockedVesting": {
+     "totalLockedVestingAmount": 0,
+     "numberOfVestingPeriod": 0,
+     "cliffUnlockAmount": 0,
+     "totalVestingDuration": 0,
+     "cliffDurationFromMigrationTime": 0
+    },
+    "activationType": 1,
+    "percentageSupplyOnMigration": 5,
+    "migrationQuoteThreshold": 500
+   },
+   "result": {
+    "migrationQuoteThreshold": 500,
+    "supplyOnCurve": 9489806.866952,
+    "totalSupply": 10000000,
+    "fdvAtStart": 34.49884108769846,
+    "fdvAtMigration": 9704.886652989531,
+    "avgPriceAtMigration": 0.00005268811125558695,
+    "priceMultiple": 281.31051209282754,
+    "effectiveFeeBps": 200.00000000000017,
+    "points": [
+     {
+      "quoteIn": 6.25,
+      "baseOut": 1811655.059401,
+      "marginalPrice": 0.0000034498841087698455,
+      "avgPrice": 0.0000034498841087698455,
+      "fdv": 34.49884108769846,
+      "pctToMigration": 0.0125
+     },
+     {
+      "quoteIn": 12.5,
+      "baseOut": 3068875.780707,
+      "marginalPrice": 0.0000049712830007347514,
+      "avgPrice": 0.0000040731528068302205,
+      "fdv": 49.71283000734751,
+      "pctToMigration": 0.025
+     },
+     {
+      "quoteIn": 18.75,
+      "baseOut": 3992401.444477,
+      "marginalPrice": 0.000006767543388546845,
+      "avgPrice": 0.000004696421504891082,
+      "fdv": 67.67543388546845,
+      "pctToMigration": 0.0375
+     },
+     {
+      "quoteIn": 25,
+      "baseOut": 4699521.785334,
+      "marginalPrice": 0.000008838665272201417,
+      "avgPrice": 0.000005319690202951835,
+      "fdv": 88.38665272201416,
+      "pctToMigration": 0.05
+     },
+     {
+      "quoteIn": 31.25,
+      "baseOut": 5258323.424494,
+      "marginalPrice": 0.000011184648651702431,
+      "avgPrice": 0.000005942958901012662,
+      "fdv": 111.8464865170243,
+      "pctToMigration": 0.0625
+     },
+     {
+      "quoteIn": 37.5,
+      "baseOut": 5711041.756349,
+      "marginalPrice": 0.000013805493527047623,
+      "avgPrice": 0.0000065662275990735,
+      "fdv": 138.05493527047622,
+      "pctToMigration": 0.075
+     },
+     {
+      "quoteIn": 43.75,
+      "baseOut": 6085266.365244,
+      "marginalPrice": 0.000016701199898250478,
+      "avgPrice": 0.0000071894962971346875,
+      "fdv": 167.01199898250476,
+      "pctToMigration": 0.0875
+     },
+     {
+      "quoteIn": 50,
+      "baseOut": 6399782.923299,
+      "marginalPrice": 0.00001987176776526679,
+      "avgPrice": 0.000007812764995195445,
+      "fdv": 198.7176776526679,
+      "pctToMigration": 0.1
+     },
+     {
+      "quoteIn": 56.25,
+      "baseOut": 6667825.431395,
+      "marginalPrice": 0.000023317197128156796,
+      "avgPrice": 0.000008436033693256383,
+      "fdv": 233.17197128156795,
+      "pctToMigration": 0.1125
+     },
+     {
+      "quoteIn": 62.5,
+      "baseOut": 6898985.959438,
+      "marginalPrice": 0.000027037487986865074,
+      "avgPrice": 0.000009059302391317133,
+      "fdv": 270.37487986865074,
+      "pctToMigration": 0.125
+     },
+     {
+      "quoteIn": 68.75,
+      "baseOut": 7100386.804846,
+      "marginalPrice": 0.000031032640341398175,
+      "avgPrice": 0.00000968257108937759,
+      "fdv": 310.3264034139818,
+      "pctToMigration": 0.1375
+     },
+     {
+      "quoteIn": 75,
+      "baseOut": 7277427.317608,
+      "marginalPrice": 0.00003530265419193649,
+      "avgPrice": 0.000010305839787439,
+      "fdv": 353.0265419193649,
+      "pctToMigration": 0.15
+     },
+     {
+      "quoteIn": 81.25,
+      "baseOut": 7434275.184275,
+      "marginalPrice": 0.00003984752953809186,
+      "avgPrice": 0.000010929108485499733,
+      "fdv": 398.4752953809186,
+      "pctToMigration": 0.1625
+     },
+     {
+      "quoteIn": 87.5,
+      "baseOut": 7574198.678737,
+      "marginalPrice": 0.00004466726638032463,
+      "avgPrice": 0.000011552377183561108,
+      "fdv": 446.6726638032463,
+      "pctToMigration": 0.175
+     },
+     {
+      "quoteIn": 93.75,
+      "baseOut": 7699796.865931,
+      "marginalPrice": 0.00004976186471820806,
+      "avgPrice": 0.000012175645881622162,
+      "fdv": 497.6186471820806,
+      "pctToMigration": 0.1875
+     },
+     {
+      "quoteIn": 100,
+      "baseOut": 7813162.544169,
+      "marginalPrice": 0.00005513132455202804,
+      "avgPrice": 0.00001279891457968329,
+      "fdv": 551.3132455202804,
+      "pctToMigration": 0.2
+     },
+     {
+      "quoteIn": 106.25,
+      "baseOut": 7915999.789407,
+      "marginalPrice": 0.000060775645881367405,
+      "avgPrice": 0.000013422183277743538,
+      "fdv": 607.756458813674,
+      "pctToMigration": 0.2125
+     },
+     {
+      "quoteIn": 112.5,
+      "baseOut": 8009710.20326,
+      "marginalPrice": 0.00006669482870712902,
+      "avgPrice": 0.000014045451975804546,
+      "fdv": 666.9482870712902,
+      "pctToMigration": 0.225
+     },
+     {
+      "quoteIn": 118.75,
+      "baseOut": 8095457.173138,
+      "marginalPrice": 0.00007288887302831141,
+      "avgPrice": 0.000014668720673865235,
+      "fdv": 728.8887302831141,
+      "pctToMigration": 0.2375
+     },
+     {
+      "quoteIn": 125,
+      "baseOut": 8174214.417744,
+      "marginalPrice": 0.00007935777884646594,
+      "avgPrice": 0.00001529198937192777,
+      "fdv": 793.5777884646594,
+      "pctToMigration": 0.25
+     },
+     {
+      "quoteIn": 131.25,
+      "baseOut": 8246803.125832,
+      "marginalPrice": 0.0000861015461581589,
+      "avgPrice": 0.000015915258069988,
+      "fdv": 861.015461581589,
+      "pctToMigration": 0.2625
+     },
+     {
+      "quoteIn": 137.5,
+      "baseOut": 8313920.697316,
+      "marginalPrice": 0.00009312017496774125,
+      "avgPrice": 0.000016538526768049326,
+      "fdv": 931.2017496774125,
+      "pctToMigration": 0.275
+     },
+     {
+      "quoteIn": 143.75,
+      "baseOut": 8376163.221609,
+      "marginalPrice": 0.00010041366527133135,
+      "avgPrice": 0.000017161795466109205,
+      "fdv": 1004.1366527133135,
+      "pctToMigration": 0.2875
+     },
+     {
+      "quoteIn": 150,
+      "baseOut": 8434043.229497,
+      "marginalPrice": 0.00010798201707390808,
+      "avgPrice": 0.000017785064164171457,
+      "fdv": 1079.8201707390808,
+      "pctToMigration": 0.3
+     },
+     {
+      "quoteIn": 156.25,
+      "baseOut": 8488003.838771,
+      "marginalPrice": 0.00011582523036876577,
+      "avgPrice": 0.00001840833286223205,
+      "fdv": 1158.2523036876576,
+      "pctToMigration": 0.3125
+     },
+     {
+      "quoteIn": 162.5,
+      "baseOut": 8538430.120302,
+      "marginalPrice": 0.00012394330516236708,
+      "avgPrice": 0.000019031601560293906,
+      "fdv": 1239.433051623671,
+      "pctToMigration": 0.325
+     },
+     {
+      "quoteIn": 168.75,
+      "baseOut": 8585658.301574,
+      "marginalPrice": 0.00013233624144881915,
+      "avgPrice": 0.000019654870258354358,
+      "fdv": 1323.3624144881915,
+      "pctToMigration": 0.3375
+     },
+     {
+      "quoteIn": 175,
+      "baseOut": 8629983.27293,
+      "marginalPrice": 0.0001410040392311245,
+      "avgPrice": 0.000020278138956413648,
+      "fdv": 1410.0403923112451,
+      "pctToMigration": 0.35
+     },
+     {
+      "quoteIn": 181.25,
+      "baseOut": 8671664.750828,
+      "marginalPrice": 0.00014994669851425594,
+      "avgPrice": 0.0000209014076544753,
+      "fdv": 1499.4669851425595,
+      "pctToMigration": 0.3625
+     },
+     {
+      "quoteIn": 187.5,
+      "baseOut": 8710932.370321,
+      "marginalPrice": 0.00015916421929050516,
+      "avgPrice": 0.000021524676352537286,
+      "fdv": 1591.6421929050516,
+      "pctToMigration": 0.375
+     },
+     {
+      "quoteIn": 193.75,
+      "baseOut": 8747989.917682,
+      "marginalPrice": 0.0001686566015585179,
+      "avgPrice": 0.000022147945050597284,
+      "fdv": 1686.566015585179,
+      "pctToMigration": 0.3875
+     },
+     {
+      "quoteIn": 200,
+      "baseOut": 8783018.867924,
+      "marginalPrice": 0.0001784238453285492,
+      "avgPrice": 0.00002277121374865873,
+      "fdv": 1784.238453285492,
+      "pctToMigration": 0.4
+     },
+     {
+      "quoteIn": 206.25,
+      "baseOut": 8816181.356853,
+      "marginalPrice": 0.00018846595059197088,
+      "avgPrice": 0.00002339448244672027,
+      "fdv": 1884.6595059197089,
+      "pctToMigration": 0.4125
+     },
+     {
+      "quoteIn": 212.5,
+      "baseOut": 8847622.690361,
+      "marginalPrice": 0.00019878291734699423,
+      "avgPrice": 0.000024017751144780064,
+      "fdv": 1987.8291734699424,
+      "pctToMigration": 0.425
+     },
+     {
+      "quoteIn": 218.75,
+      "baseOut": 8877473.472899,
+      "marginalPrice": 0.00020937474560487807,
+      "avgPrice": 0.00002464101984284113,
+      "fdv": 2093.747456048781,
+      "pctToMigration": 0.4375
+     },
+     {
+      "quoteIn": 225,
+      "baseOut": 8905851.420899,
+      "marginalPrice": 0.0002202414353567716,
+      "avgPrice": 0.000025264288540902628,
+      "fdv": 2202.4143535677163,
+      "pctToMigration": 0.45
+     },
+     {
+      "quoteIn": 231.25,
+      "baseOut": 8932862.914232,
+      "marginalPrice": 0.00023138298660312133,
+      "avgPrice": 0.000025887557238964036,
+      "fdv": 2313.8298660312134,
+      "pctToMigration": 0.4625
+     },
+     {
+      "quoteIn": 237.5,
+      "baseOut": 8958604.328819,
+      "marginalPrice": 0.00024279939934446147,
+      "avgPrice": 0.000026510825937025094,
+      "fdv": 2427.9939934446147,
+      "pctToMigration": 0.475
+     },
+     {
+      "quoteIn": 243.75,
+      "baseOut": 8983163.185582,
+      "marginalPrice": 0.0002544906735811809,
+      "avgPrice": 0.00002713409463508571,
+      "fdv": 2544.906735811809,
+      "pctToMigration": 0.4875
+     },
+     {
+      "quoteIn": 250,
+      "baseOut": 9006619.144602,
+      "marginalPrice": 0.0002664568093195796,
+      "avgPrice": 0.000027757363333147513,
+      "fdv": 2664.568093195796,
+      "pctToMigration": 0.5
+     },
+     {
+      "quoteIn": 256.25,
+      "baseOut": 9029044.868283,
+      "marginalPrice": 0.0002786978065414897,
+      "avgPrice": 0.000028380632031207257,
+      "fdv": 2786.9780654148967,
+      "pctToMigration": 0.5125
+     },
+     {
+      "quoteIn": 262.5,
+      "baseOut": 9050506.773218,
+      "marginalPrice": 0.00029121366527942196,
+      "avgPrice": 0.00002900390072926993,
+      "fdv": 2912.1366527942196,
+      "pctToMigration": 0.525
+     },
+     {
+      "quoteIn": 268.75,
+      "baseOut": 9071065.687163,
+      "marginalPrice": 0.00030400438548067535,
+      "avgPrice": 0.000029627169427328032,
+      "fdv": 3040.0438548067536,
+      "pctToMigration": 0.5375
+     },
+     {
+      "quoteIn": 275,
+      "baseOut": 9090777.42478,
+      "marginalPrice": 0.0003170699672163911,
+      "avgPrice": 0.00003025043812539004,
+      "fdv": 3170.6996721639107,
+      "pctToMigration": 0.55
+     },
+     {
+      "quoteIn": 281.25,
+      "baseOut": 9109693.293659,
+      "marginalPrice": 0.0003304104104326241,
+      "avgPrice": 0.00003087370682345257,
+      "fdv": 3304.1041043262408,
+      "pctToMigration": 0.5625
+     },
+     {
+      "quoteIn": 287.5,
+      "baseOut": 9127860.540249,
+      "marginalPrice": 0.0003440257151262745,
+      "avgPrice": 0.000031496975521512214,
+      "fdv": 3440.257151262745,
+      "pctToMigration": 0.575
+     },
+     {
+      "quoteIn": 293.75,
+      "baseOut": 9145322.743872,
+      "marginalPrice": 0.0003579158813477438,
+      "avgPrice": 0.000032120244219574736,
+      "fdv": 3579.158813477438,
+      "pctToMigration": 0.5875
+     },
+     {
+      "quoteIn": 300,
+      "baseOut": 9162120.165745,
+      "marginalPrice": 0.0003720809090379735,
+      "avgPrice": 0.00003274351291763549,
+      "fdv": 3720.8090903797347,
+      "pctToMigration": 0.6
+     },
+     {
+      "quoteIn": 306.25,
+      "baseOut": 9178290.058875,
+      "marginalPrice": 0.0003865207982360819,
+      "avgPrice": 0.00003336678161569647,
+      "fdv": 3865.2079823608187,
+      "pctToMigration": 0.6125
+     },
+     {
+      "quoteIn": 312.5,
+      "baseOut": 9193866.943866,
+      "marginalPrice": 0.0004012355489310816,
+      "avgPrice": 0.000033990050313757804,
+      "fdv": 4012.3554893108158,
+      "pctToMigration": 0.625
+     },
+     {
+      "quoteIn": 318.75,
+      "baseOut": 9208882.854926,
+      "marginalPrice": 0.00041622516109922055,
+      "avgPrice": 0.00003461331901181638,
+      "fdv": 4162.251610992205,
+      "pctToMigration": 0.6375
+     },
+     {
+      "quoteIn": 325,
+      "baseOut": 9223367.559762,
+      "marginalPrice": 0.0004314896348088832,
+      "avgPrice": 0.000035236587709878315,
+      "fdv": 4314.896348088832,
+      "pctToMigration": 0.65
+     },
+     {
+      "quoteIn": 331.25,
+      "baseOut": 9237348.756552,
+      "marginalPrice": 0.00044702896997130464,
+      "avgPrice": 0.00003585985640793807,
+      "fdv": 4470.2896997130465,
+      "pctToMigration": 0.6625
+     },
+     {
+      "quoteIn": 337.5,
+      "baseOut": 9250852.250716,
+      "marginalPrice": 0.0004628431666717641,
+      "avgPrice": 0.000036483125106000696,
+      "fdv": 4628.431666717641,
+      "pctToMigration": 0.675
+     },
+     {
+      "quoteIn": 343.75,
+      "baseOut": 9263902.113883,
+      "marginalPrice": 0.00047893222480716946,
+      "avgPrice": 0.0000371063938040593,
+      "fdv": 4789.322248071695,
+      "pctToMigration": 0.6875
+     },
+     {
+      "quoteIn": 350,
+      "baseOut": 9276520.82709,
+      "marginalPrice": 0.0004952961445016833,
+      "avgPrice": 0.000037729662502120774,
+      "fdv": 4952.961445016833,
+      "pctToMigration": 0.7
+     },
+     {
+      "quoteIn": 356.25,
+      "baseOut": 9288729.41003,
+      "marginalPrice": 0.0005119349256761834,
+      "avgPrice": 0.00003835293120018332,
+      "fdv": 5119.349256761834,
+      "pctToMigration": 0.7125
+     },
+     {
+      "quoteIn": 362.5,
+      "baseOut": 9300547.537892,
+      "marginalPrice": 0.0005288485683164592,
+      "avgPrice": 0.000038976199898244036,
+      "fdv": 5288.485683164592,
+      "pctToMigration": 0.725
+     },
+     {
+      "quoteIn": 368.75,
+      "baseOut": 9311993.647167,
+      "marginalPrice": 0.0005460370724968383,
+      "avgPrice": 0.000039599468596307005,
+      "fdv": 5460.370724968383,
+      "pctToMigration": 0.7375
+     },
+     {
+      "quoteIn": 375,
+      "baseOut": 9323085.031623,
+      "marginalPrice": 0.0005635004380917802,
+      "avgPrice": 0.00004022273729436516,
+      "fdv": 5635.004380917801,
+      "pctToMigration": 0.75
+     },
+     {
+      "quoteIn": 381.25,
+      "baseOut": 9333837.929483,
+      "marginalPrice": 0.0005812386652764181,
+      "avgPrice": 0.00004084600599242646,
+      "fdv": 5812.386652764181,
+      "pctToMigration": 0.7625
+     },
+     {
+      "quoteIn": 387.5,
+      "baseOut": 9344267.602753,
+      "marginalPrice": 0.0005992517539334109,
+      "avgPrice": 0.00004146927469048886,
+      "fdv": 5992.517539334109,
+      "pctToMigration": 0.775
+     },
+     {
+      "quoteIn": 393.75,
+      "baseOut": 9354388.409495,
+      "marginalPrice": 0.0006175397040300814,
+      "avgPrice": 0.00004209254338854813,
+      "fdv": 6175.397040300813,
+      "pctToMigration": 0.7875
+     },
+     {
+      "quoteIn": 400,
+      "baseOut": 9364213.869772,
+      "marginalPrice": 0.0006361025156887639,
+      "avgPrice": 0.00004271581208660917,
+      "fdv": 6361.025156887638,
+      "pctToMigration": 0.8
+     },
+     {
+      "quoteIn": 406.25,
+      "baseOut": 9373756.725909,
+      "marginalPrice": 0.0006549401887939186,
+      "avgPrice": 0.00004333908078466851,
+      "fdv": 6549.401887939185,
+      "pctToMigration": 0.8125
+     },
+     {
+      "quoteIn": 412.5,
+      "baseOut": 9383028.997621,
+      "marginalPrice": 0.0006740527234455037,
+      "avgPrice": 0.00004396234948272956,
+      "fdv": 6740.527234455037,
+      "pctToMigration": 0.825
+     },
+     {
+      "quoteIn": 418.75,
+      "baseOut": 9392042.032522,
+      "marginalPrice": 0.0006934401196323085,
+      "avgPrice": 0.00004458561818079461,
+      "fdv": 6934.401196323085,
+      "pctToMigration": 0.8375
+     },
+     {
+      "quoteIn": 425,
+      "baseOut": 9400806.552457,
+      "marginalPrice": 0.0007131023771241885,
+      "avgPrice": 0.000045208886878852094,
+      "fdv": 7131.023771241885,
+      "pctToMigration": 0.85
+     },
+     {
+      "quoteIn": 431.25,
+      "baseOut": 9409332.696043,
+      "marginalPrice": 0.0007330394963394986,
+      "avgPrice": 0.00004583215557691544,
+      "fdv": 7330.394963394986,
+      "pctToMigration": 0.8625
+     },
+     {
+      "quoteIn": 437.5,
+      "baseOut": 9417630.057803,
+      "marginalPrice": 0.0007532514768887425,
+      "avgPrice": 0.00004645542427497546,
+      "fdv": 7532.514768887425,
+      "pctToMigration": 0.875
+     },
+     {
+      "quoteIn": 443.75,
+      "baseOut": 9425707.724175,
+      "marginalPrice": 0.0007737383189857614,
+      "avgPrice": 0.00004707869297303507,
+      "fdv": 7737.383189857614,
+      "pctToMigration": 0.8875
+     },
+     {
+      "quoteIn": 450,
+      "baseOut": 9433574.306707,
+      "marginalPrice": 0.0007945000226688223,
+      "avgPrice": 0.00004770196167109882,
+      "fdv": 7945.000226688223,
+      "pctToMigration": 0.9
+     },
+     {
+      "quoteIn": 456.25,
+      "baseOut": 9441237.972684,
+      "marginalPrice": 0.0008155365876798245,
+      "avgPrice": 0.00004832523036915837,
+      "fdv": 8155.365876798244,
+      "pctToMigration": 0.9125
+     },
+     {
+      "quoteIn": 462.5,
+      "baseOut": 9448706.473407,
+      "marginalPrice": 0.0008368480143212654,
+      "avgPrice": 0.0000489484990672202,
+      "fdv": 8368.480143212653,
+      "pctToMigration": 0.925
+     },
+     {
+      "quoteIn": 468.75,
+      "baseOut": 9455987.170349,
+      "marginalPrice": 0.0008584343023462494,
+      "avgPrice": 0.00004957176776527917,
+      "fdv": 8584.343023462494,
+      "pctToMigration": 0.9375
+     },
+     {
+      "quoteIn": 475,
+      "baseOut": 9463087.059353,
+      "marginalPrice": 0.0008802954520104794,
+      "avgPrice": 0.00005019503646334161,
+      "fdv": 8802.954520104795,
+      "pctToMigration": 0.95
+     },
+     {
+      "quoteIn": 481.25,
+      "baseOut": 9470012.793058,
+      "marginalPrice": 0.000902431463035748,
+      "avgPrice": 0.00005081830516140175,
+      "fdv": 9024.31463035748,
+      "pctToMigration": 0.9625
+     },
+     {
+      "quoteIn": 487.5,
+      "baseOut": 9476770.701686,
+      "marginalPrice": 0.0009248423357049345,
+      "avgPrice": 0.000051441573859465594,
+      "fdv": 9248.423357049345,
+      "pctToMigration": 0.975
+     },
+     {
+      "quoteIn": 493.75,
+      "baseOut": 9483366.812345,
+      "marginalPrice": 0.0009475280696621865,
+      "avgPrice": 0.000052064842557524985,
+      "fdv": 9475.280696621865,
+      "pctToMigration": 0.9875
+     },
+     {
+      "quoteIn": 500,
+      "baseOut": 9489806.866952,
+      "marginalPrice": 0.0009704886652989531,
+      "avgPrice": 0.00005268811125558695,
+      "fdv": 9704.886652989531,
+      "pctToMigration": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "exp-hype",
+   "name": "Exponential Hype",
+   "tagline": "Steep back-end for viral launches",
+   "useCase": "Launch expected to go viral: early supply is cheap, late demand pays exponentially — maximizing treasury at migration.",
+   "rationale": [
+    "Two-segment structure (here: 12% cheap supply then a steep ramp) concentrates price impact on late FOMO, not early community.",
+    "750→200 bps fee decay front-loads sniper tax into the first minutes when MEV is worst.",
+    "Threshold 50 SOL: meaningful treasury, still reachable mid-hype."
+   ],
+   "params": {
+    "token": {
+     "tokenType": 0,
+     "tokenBaseDecimal": 6,
+     "tokenQuoteDecimal": 9,
+     "tokenAuthorityOption": 1,
+     "totalTokenSupply": 1000000000,
+     "leftover": 0
+    },
+    "fee": {
+     "baseFeeParams": {
+      "baseFeeMode": 0,
+      "feeSchedulerParam": {
+       "startingFeeBps": 750,
+       "endingFeeBps": 200,
+       "numberOfPeriod": 6,
+       "totalDuration": 900
+      }
+     },
+     "dynamicFeeEnabled": true,
+     "collectFeeMode": 0,
+     "creatorTradingFeePercentage": 50,
+     "poolCreationFee": 0,
+     "enableFirstSwapWithMinFee": false
+    },
+    "migration": {
+     "migrationOption": 1,
+     "migrationFeeOption": 3,
+     "migrationFee": {
+      "feePercentage": 0,
+      "creatorFeePercentage": 0
+     }
+    },
+    "liquidityDistribution": {
+     "partnerLiquidityPercentage": 20,
+     "partnerPermanentLockedLiquidityPercentage": 30,
+     "creatorLiquidityPercentage": 20,
+     "creatorPermanentLockedLiquidityPercentage": 30
+    },
+    "lockedVesting": {
+     "totalLockedVestingAmount": 0,
+     "numberOfVestingPeriod": 0,
+     "cliffUnlockAmount": 0,
+     "totalVestingDuration": 0,
+     "cliffDurationFromMigrationTime": 0
+    },
+    "activationType": 1,
+    "percentageSupplyOnMigration": 12,
+    "migrationQuoteThreshold": 50
+   },
+   "result": {
+    "migrationQuoteThreshold": 50,
+    "supplyOnCurve": 870376659.316461,
+    "totalSupply": 1000000000,
+    "fdvAtStart": 8.98952306269963,
+    "fdvAtMigration": 389.77975840961847,
+    "avgPriceAtMigration": 5.744639342611376e-8,
+    "priceMultiple": 43.3593368292182,
+    "effectiveFeeBps": 749.9999999999995,
+    "points": [
+     {
+      "quoteIn": 0.625,
+      "baseOut": 69525379.226549,
+      "marginalPrice": 8.98952306269963e-9,
+      "avgPrice": 8.98952306269963e-9,
+      "fdv": 8.98952306269963,
+      "pctToMigration": 0.0125
+     },
+     {
+      "quoteIn": 1.25,
+      "baseOut": 130168995.604348,
+      "marginalPrice": 1.0306113608172054e-8,
+      "avgPrice": 9.60290116856557e-9,
+      "fdv": 10.306113608172055,
+      "pctToMigration": 0.025
+     },
+     {
+      "quoteIn": 1.875,
+      "baseOut": 183530613.213814,
+      "marginalPrice": 1.1712538487385159e-8,
+      "avgPrice": 1.0216279274431545e-8,
+      "fdv": 11.712538487385158,
+      "pctToMigration": 0.0375
+     },
+     {
+      "quoteIn": 2.5,
+      "baseOut": 230847561.673397,
+      "marginalPrice": 1.320879770033902e-8,
+      "avgPrice": 1.082965738029756e-8,
+      "fdv": 13.20879770033902,
+      "pctToMigration": 0.05
+     },
+     {
+      "quoteIn": 3.125,
+      "baseOut": 273091873.548642,
+      "marginalPrice": 1.479489124703314e-8,
+      "avgPrice": 1.1443035486163553e-8,
+      "fdv": 14.79489124703314,
+      "pctToMigration": 0.0625
+     },
+     {
+      "quoteIn": 3.75,
+      "baseOut": 311037770.177287,
+      "marginalPrice": 1.6470819127467746e-8,
+      "avgPrice": 1.2056413592029531e-8,
+      "fdv": 16.470819127467745,
+      "pctToMigration": 0.075
+     },
+     {
+      "quoteIn": 4.375,
+      "baseOut": 345309544.491303,
+      "marginalPrice": 1.8236581341643442e-8,
+      "avgPrice": 1.2669791697895535e-8,
+      "fdv": 18.236581341643443,
+      "pctToMigration": 0.0875
+     },
+     {
+      "quoteIn": 5,
+      "baseOut": 376416177.303108,
+      "marginalPrice": 2.009217788955971e-8,
+      "avgPrice": 1.3283169803761556e-8,
+      "fdv": 20.09217788955971,
+      "pctToMigration": 0.1
+     },
+     {
+      "quoteIn": 5.625,
+      "baseOut": 404776786.046482,
+      "marginalPrice": 2.2037608771215818e-8,
+      "avgPrice": 1.3896547909627555e-8,
+      "fdv": 22.03760877121582,
+      "pctToMigration": 0.1125
+     },
+     {
+      "quoteIn": 6.25,
+      "baseOut": 430739618.749697,
+      "marginalPrice": 2.4072873986612627e-8,
+      "avgPrice": 1.4509926015493545e-8,
+      "fdv": 24.072873986612628,
+      "pctToMigration": 0.125
+     },
+     {
+      "quoteIn": 6.875,
+      "baseOut": 454596425.809491,
+      "marginalPrice": 2.619797353575102e-8,
+      "avgPrice": 1.512330412135956e-8,
+      "fdv": 26.19797353575102,
+      "pctToMigration": 0.1375
+     },
+     {
+      "quoteIn": 7.5,
+      "baseOut": 476593470.701497,
+      "marginalPrice": 2.8412907418629293e-8,
+      "avgPrice": 1.5736682227225573e-8,
+      "fdv": 28.412907418629292,
+      "pctToMigration": 0.15
+     },
+     {
+      "quoteIn": 8.125,
+      "baseOut": 496940062.267261,
+      "marginalPrice": 3.071767563524743e-8,
+      "avgPrice": 1.635006033309157e-8,
+      "fdv": 30.71767563524743,
+      "pctToMigration": 0.1625
+     },
+     {
+      "quoteIn": 8.75,
+      "baseOut": 515815235.896108,
+      "marginalPrice": 3.31122781856063e-8,
+      "avgPrice": 1.6963438438957562e-8,
+      "fdv": 33.1122781856063,
+      "pctToMigration": 0.175
+     },
+     {
+      "quoteIn": 9.375,
+      "baseOut": 533373035.787927,
+      "marginalPrice": 3.559671506970624e-8,
+      "avgPrice": 1.7576816544823553e-8,
+      "fdv": 35.59671506970624,
+      "pctToMigration": 0.1875
+     },
+     {
+      "quoteIn": 10,
+      "baseOut": 549746728.500286,
+      "marginalPrice": 3.81709862875492e-8,
+      "avgPrice": 1.8190194650689584e-8,
+      "fdv": 38.1709862875492,
+      "pctToMigration": 0.2
+     },
+     {
+      "quoteIn": 10.625,
+      "baseOut": 565052191.812631,
+      "marginalPrice": 4.083509183912712e-8,
+      "avgPrice": 1.8803572756555568e-8,
+      "fdv": 40.83509183912712,
+      "pctToMigration": 0.2125
+     },
+     {
+      "quoteIn": 11.25,
+      "baseOut": 579390661.268685,
+      "marginalPrice": 4.3589031724450426e-8,
+      "avgPrice": 1.9416950862421576e-8,
+      "fdv": 43.58903172445043,
+      "pctToMigration": 0.225
+     },
+     {
+      "quoteIn": 11.875,
+      "baseOut": 592850972.083421,
+      "marginalPrice": 4.643280594351252e-8,
+      "avgPrice": 2.0030328968287583e-8,
+      "fdv": 46.43280594351252,
+      "pctToMigration": 0.2375
+     },
+     {
+      "quoteIn": 12.5,
+      "baseOut": 605511401.372785,
+      "marginalPrice": 4.936641449631271e-8,
+      "avgPrice": 2.0643707074153564e-8,
+      "fdv": 49.36641449631271,
+      "pctToMigration": 0.25
+     },
+     {
+      "quoteIn": 13.125,
+      "baseOut": 617441191.435632,
+      "marginalPrice": 5.238985738285868e-8,
+      "avgPrice": 2.1257085180019572e-8,
+      "fdv": 52.38985738285868,
+      "pctToMigration": 0.2625
+     },
+     {
+      "quoteIn": 13.75,
+      "baseOut": 628701816.704256,
+      "marginalPrice": 5.550313460314345e-8,
+      "avgPrice": 2.1870463285885583e-8,
+      "fdv": 55.50313460314345,
+      "pctToMigration": 0.275
+     },
+     {
+      "quoteIn": 14.375,
+      "baseOut": 639348043.314058,
+      "marginalPrice": 5.870624615716595e-8,
+      "avgPrice": 2.2483841391751584e-8,
+      "fdv": 58.70624615716595,
+      "pctToMigration": 0.2875
+     },
+     {
+      "quoteIn": 15,
+      "baseOut": 649428819.843324,
+      "marginalPrice": 6.199919204493142e-8,
+      "avgPrice": 2.3097219497617585e-8,
+      "fdv": 61.999192044931426,
+      "pctToMigration": 0.3
+     },
+     {
+      "quoteIn": 15.625,
+      "baseOut": 658988029.795772,
+      "marginalPrice": 6.538197226643654e-8,
+      "avgPrice": 2.3710597603483586e-8,
+      "fdv": 65.38197226643655,
+      "pctToMigration": 0.3125
+     },
+     {
+      "quoteIn": 16.25,
+      "baseOut": 668065130.230905,
+      "marginalPrice": 6.885458682168206e-8,
+      "avgPrice": 2.4323975709349583e-8,
+      "fdv": 68.85458682168206,
+      "pctToMigration": 0.325
+     },
+     {
+      "quoteIn": 16.875,
+      "baseOut": 676695696.14494,
+      "marginalPrice": 7.24170357106745e-8,
+      "avgPrice": 2.4937353815215604e-8,
+      "fdv": 72.4170357106745,
+      "pctToMigration": 0.3375
+     },
+     {
+      "quoteIn": 17.5,
+      "baseOut": 684911886.440363,
+      "marginalPrice": 7.606931893339507e-8,
+      "avgPrice": 2.55507319210816e-8,
+      "fdv": 76.06931893339507,
+      "pctToMigration": 0.35
+     },
+     {
+      "quoteIn": 18.125,
+      "baseOut": 692742844.351757,
+      "marginalPrice": 7.981143648986141e-8,
+      "avgPrice": 2.616411002694759e-8,
+      "fdv": 79.8114364898614,
+      "pctToMigration": 0.3625
+     },
+     {
+      "quoteIn": 18.75,
+      "baseOut": 700215042.837547,
+      "marginalPrice": 8.364338838008403e-8,
+      "avgPrice": 2.677748813281363e-8,
+      "fdv": 83.64338838008403,
+      "pctToMigration": 0.375
+     },
+     {
+      "quoteIn": 19.375,
+      "baseOut": 707352583.564512,
+      "marginalPrice": 8.756517460401998e-8,
+      "avgPrice": 2.7390866238679624e-8,
+      "fdv": 87.56517460401997,
+      "pctToMigration": 0.3875
+     },
+     {
+      "quoteIn": 20,
+      "baseOut": 714177456.600267,
+      "marginalPrice": 9.157679516170751e-8,
+      "avgPrice": 2.8004244344545616e-8,
+      "fdv": 91.57679516170751,
+      "pctToMigration": 0.4
+     },
+     {
+      "quoteIn": 20.625,
+      "baseOut": 720709766.708916,
+      "marginalPrice": 9.567825005314562e-8,
+      "avgPrice": 2.8617622450411626e-8,
+      "fdv": 95.67825005314562,
+      "pctToMigration": 0.4125
+     },
+     {
+      "quoteIn": 21.25,
+      "baseOut": 726967931.155417,
+      "marginalPrice": 9.986953927831696e-8,
+      "avgPrice": 2.923100055627764e-8,
+      "fdv": 99.86953927831696,
+      "pctToMigration": 0.425
+     },
+     {
+      "quoteIn": 21.875,
+      "baseOut": 732968853.117641,
+      "marginalPrice": 1.0415066283720981e-7,
+      "avgPrice": 2.9844378662143615e-8,
+      "fdv": 104.15066283720981,
+      "pctToMigration": 0.4375
+     },
+     {
+      "quoteIn": 22.5,
+      "baseOut": 738728074.144718,
+      "marginalPrice": 1.0852162072987849e-7,
+      "avgPrice": 3.045775676800962e-8,
+      "fdv": 108.52162072987849,
+      "pctToMigration": 0.45
+     },
+     {
+      "quoteIn": 23.125,
+      "baseOut": 744259908.557229,
+      "marginalPrice": 1.1298241295626601e-7,
+      "avgPrice": 3.1071134873875624e-8,
+      "fdv": 112.982412956266,
+      "pctToMigration": 0.4625
+     },
+     {
+      "quoteIn": 23.75,
+      "baseOut": 749577562.236327,
+      "marginalPrice": 1.1753303951640823e-7,
+      "avgPrice": 3.168451297974164e-8,
+      "fdv": 117.53303951640822,
+      "pctToMigration": 0.475
+     },
+     {
+      "quoteIn": 24.375,
+      "baseOut": 754693237.877126,
+      "marginalPrice": 1.2217350041027862e-7,
+      "avgPrice": 3.229789108560765e-8,
+      "fdv": 122.17350041027862,
+      "pctToMigration": 0.4875
+     },
+     {
+      "quoteIn": 25,
+      "baseOut": 759618228.472233,
+      "marginalPrice": 1.2690379563789022e-7,
+      "avgPrice": 3.2911269191473656e-8,
+      "fdv": 126.90379563789023,
+      "pctToMigration": 0.5
+     },
+     {
+      "quoteIn": 25.625,
+      "baseOut": 764363000.532849,
+      "marginalPrice": 1.317239251992374e-7,
+      "avgPrice": 3.352464729733965e-8,
+      "fdv": 131.7239251992374,
+      "pctToMigration": 0.5125
+     },
+     {
+      "quoteIn": 26.25,
+      "baseOut": 768937268.33817,
+      "marginalPrice": 1.3663388909432845e-7,
+      "avgPrice": 3.413802540320564e-8,
+      "fdv": 136.63388909432845,
+      "pctToMigration": 0.525
+     },
+     {
+      "quoteIn": 26.875,
+      "baseOut": 773350060.321576,
+      "marginalPrice": 1.416336873231906e-7,
+      "avgPrice": 3.475140350907166e-8,
+      "fdv": 141.6336873231906,
+      "pctToMigration": 0.5375
+     },
+     {
+      "quoteIn": 27.5,
+      "baseOut": 777609778.548281,
+      "marginalPrice": 1.4672331988575215e-7,
+      "avgPrice": 3.5364781614937673e-8,
+      "fdv": 146.72331988575215,
+      "pctToMigration": 0.55
+     },
+     {
+      "quoteIn": 28.125,
+      "baseOut": 781724252.108906,
+      "marginalPrice": 1.5190278678204683e-7,
+      "avgPrice": 3.597815972080365e-8,
+      "fdv": 151.90278678204683,
+      "pctToMigration": 0.5625
+     },
+     {
+      "quoteIn": 28.75,
+      "baseOut": 785700785.142887,
+      "marginalPrice": 1.5717208801213033e-7,
+      "avgPrice": 3.659153782666966e-8,
+      "fdv": 157.17208801213033,
+      "pctToMigration": 0.575
+     },
+     {
+      "quoteIn": 29.375,
+      "baseOut": 789546200.111464,
+      "marginalPrice": 1.6253122357592462e-7,
+      "avgPrice": 3.7204915932535666e-8,
+      "fdv": 162.53122357592463,
+      "pctToMigration": 0.5875
+     },
+     {
+      "quoteIn": 30,
+      "baseOut": 793266876.859576,
+      "marginalPrice": 1.6798019347344614e-7,
+      "avgPrice": 3.781829403840165e-8,
+      "fdv": 167.98019347344615,
+      "pctToMigration": 0.6
+     },
+     {
+      "quoteIn": 30.625,
+      "baseOut": 796868787.937137,
+      "marginalPrice": 1.7351899770474324e-7,
+      "avgPrice": 3.8431672144267655e-8,
+      "fdv": 173.51899770474324,
+      "pctToMigration": 0.6125
+     },
+     {
+      "quoteIn": 31.25,
+      "baseOut": 800357530.591039,
+      "marginalPrice": 1.79147636269754e-7,
+      "avgPrice": 3.904505025013365e-8,
+      "fdv": 179.14763626975397,
+      "pctToMigration": 0.625
+     },
+     {
+      "quoteIn": 31.875,
+      "baseOut": 803738355.788318,
+      "marginalPrice": 1.8486610916855536e-7,
+      "avgPrice": 3.965842835599969e-8,
+      "fdv": 184.86610916855537,
+      "pctToMigration": 0.6375
+     },
+     {
+      "quoteIn": 32.5,
+      "baseOut": 807016194.587025,
+      "marginalPrice": 1.906744164009958e-7,
+      "avgPrice": 4.0271806461865675e-8,
+      "fdv": 190.6744164009958,
+      "pctToMigration": 0.65
+     },
+     {
+      "quoteIn": 33.125,
+      "baseOut": 810195682.133319,
+      "marginalPrice": 1.9657255796724318e-7,
+      "avgPrice": 4.088518456773166e-8,
+      "fdv": 196.57255796724317,
+      "pctToMigration": 0.6625
+     },
+     {
+      "quoteIn": 33.75,
+      "baseOut": 813281179.530406,
+      "marginalPrice": 2.025605338672667e-7,
+      "avgPrice": 4.149856267359768e-8,
+      "fdv": 202.56053386726668,
+      "pctToMigration": 0.675
+     },
+     {
+      "quoteIn": 34.375,
+      "baseOut": 816276793.796293,
+      "marginalPrice": 2.0863834410099967e-7,
+      "avgPrice": 4.211194077946371e-8,
+      "fdv": 208.6383441009997,
+      "pctToMigration": 0.6875
+     },
+     {
+      "quoteIn": 35,
+      "baseOut": 819186396.102422,
+      "marginalPrice": 2.1480598866843714e-7,
+      "avgPrice": 4.272531888532972e-8,
+      "fdv": 214.80598866843715,
+      "pctToMigration": 0.7
+     },
+     {
+      "quoteIn": 35.625,
+      "baseOut": 822013638.463502,
+      "marginalPrice": 2.2106346756959326e-7,
+      "avgPrice": 4.333869699119569e-8,
+      "fdv": 221.06346756959326,
+      "pctToMigration": 0.7125
+     },
+     {
+      "quoteIn": 36.25,
+      "baseOut": 824761969.02984,
+      "marginalPrice": 2.2741078080457811e-7,
+      "avgPrice": 4.3952075097061694e-8,
+      "fdv": 227.4107808045781,
+      "pctToMigration": 0.725
+     },
+     {
+      "quoteIn": 36.875,
+      "baseOut": 827434646.116816,
+      "marginalPrice": 2.3384792837324922e-7,
+      "avgPrice": 4.456545320292769e-8,
+      "fdv": 233.84792837324923,
+      "pctToMigration": 0.7375
+     },
+     {
+      "quoteIn": 37.5,
+      "baseOut": 830034751.091512,
+      "marginalPrice": 2.403749102757257e-7,
+      "avgPrice": 4.5178831308793715e-8,
+      "fdv": 240.37491027572568,
+      "pctToMigration": 0.75
+     },
+     {
+      "quoteIn": 38.125,
+      "baseOut": 832565200.223662,
+      "marginalPrice": 2.4699172651178904e-7,
+      "avgPrice": 4.579220941465968e-8,
+      "fdv": 246.99172651178904,
+      "pctToMigration": 0.7625
+     },
+     {
+      "quoteIn": 38.75,
+      "baseOut": 835028755.596736,
+      "marginalPrice": 2.5369837708179764e-7,
+      "avgPrice": 4.6405587520525704e-8,
+      "fdv": 253.69837708179764,
+      "pctToMigration": 0.775
+     },
+     {
+      "quoteIn": 39.375,
+      "baseOut": 837428035.165002,
+      "marginalPrice": 2.6049486198546225e-7,
+      "avgPrice": 4.7018965626391735e-8,
+      "fdv": 260.49486198546225,
+      "pctToMigration": 0.7875
+     },
+     {
+      "quoteIn": 40,
+      "baseOut": 839765522.033531,
+      "marginalPrice": 2.6738118122277533e-7,
+      "avgPrice": 4.763234373225773e-8,
+      "fdv": 267.38118122277535,
+      "pctToMigration": 0.8
+     },
+     {
+      "quoteIn": 40.625,
+      "baseOut": 842043573.030307,
+      "marginalPrice": 2.7435733479386527e-7,
+      "avgPrice": 4.824572183812371e-8,
+      "fdv": 274.3573347938653,
+      "pctToMigration": 0.8125
+     },
+     {
+      "quoteIn": 41.25,
+      "baseOut": 844264426.632654,
+      "marginalPrice": 2.814233226987715e-7,
+      "avgPrice": 4.88590999439897e-8,
+      "fdv": 281.42332269877147,
+      "pctToMigration": 0.825
+     },
+     {
+      "quoteIn": 41.875,
+      "baseOut": 846430210.304012,
+      "marginalPrice": 2.8857914493745935e-7,
+      "avgPrice": 4.947247804985573e-8,
+      "fdv": 288.5791449374594,
+      "pctToMigration": 0.8375
+     },
+     {
+      "quoteIn": 42.5,
+      "baseOut": 848542947.291615,
+      "marginalPrice": 2.958248015097572e-7,
+      "avgPrice": 5.0085856155721736e-8,
+      "fdv": 295.8248015097572,
+      "pctToMigration": 0.85
+     },
+     {
+      "quoteIn": 43.125,
+      "baseOut": 850604562.93072,
+      "marginalPrice": 3.031602924157773e-7,
+      "avgPrice": 5.0699234261587714e-8,
+      "fdv": 303.1602924157773,
+      "pctToMigration": 0.8625
+     },
+     {
+      "quoteIn": 43.75,
+      "baseOut": 852616890.496682,
+      "marginalPrice": 3.1058561765573835e-7,
+      "avgPrice": 5.1312612367453745e-8,
+      "fdv": 310.58561765573836,
+      "pctToMigration": 0.875
+     },
+     {
+      "quoteIn": 44.375,
+      "baseOut": 854581676.642268,
+      "marginalPrice": 3.181007772291811e-7,
+      "avgPrice": 5.192599047331972e-8,
+      "fdv": 318.1007772291811,
+      "pctToMigration": 0.8875
+     },
+     {
+      "quoteIn": 45,
+      "baseOut": 856500586.454087,
+      "marginalPrice": 3.257057711365373e-7,
+      "avgPrice": 5.253936857918572e-8,
+      "fdv": 325.7057711365373,
+      "pctToMigration": 0.9
+     },
+     {
+      "quoteIn": 45.625,
+      "baseOut": 858375208.158927,
+      "marginalPrice": 3.3340059937765547e-7,
+      "avgPrice": 5.315274668505174e-8,
+      "fdv": 333.40059937765545,
+      "pctToMigration": 0.9125
+     },
+     {
+      "quoteIn": 46.25,
+      "baseOut": 860207057.507939,
+      "marginalPrice": 3.411852619524008e-7,
+      "avgPrice": 5.376612479091774e-8,
+      "fdv": 341.18526195240077,
+      "pctToMigration": 0.925
+     },
+     {
+      "quoteIn": 46.875,
+      "baseOut": 861997581.864111,
+      "marginalPrice": 3.490597588609254e-7,
+      "avgPrice": 5.437950289678374e-8,
+      "fdv": 349.0597588609254,
+      "pctToMigration": 0.9375
+     },
+     {
+      "quoteIn": 47.5,
+      "baseOut": 863748164.016198,
+      "marginalPrice": 3.5702409010331665e-7,
+      "avgPrice": 5.499288100264978e-8,
+      "fdv": 357.02409010331667,
+      "pctToMigration": 0.95
+     },
+     {
+      "quoteIn": 48.125,
+      "baseOut": 865460125.740233,
+      "marginalPrice": 3.6507825567907193e-7,
+      "avgPrice": 5.5606259108515735e-8,
+      "fdv": 365.07825567907196,
+      "pctToMigration": 0.9625
+     },
+     {
+      "quoteIn": 48.75,
+      "baseOut": 867134731.127882,
+      "marginalPrice": 3.7322225558907545e-7,
+      "avgPrice": 5.6219637214381766e-8,
+      "fdv": 373.2222555890755,
+      "pctToMigration": 0.975
+     },
+     {
+      "quoteIn": 49.375,
+      "baseOut": 868773189.699285,
+      "marginalPrice": 3.8145608983253506e-7,
+      "avgPrice": 5.683301532024778e-8,
+      "fdv": 381.45608983253504,
+      "pctToMigration": 0.9875
+     },
+     {
+      "quoteIn": 50,
+      "baseOut": 870376659.316461,
+      "marginalPrice": 3.8977975840961847e-7,
+      "avgPrice": 5.744639342611376e-8,
+      "fdv": 389.77975840961847,
+      "pctToMigration": 1
+     }
+    ]
+   }
+  },
+  {
+   "id": "builder-vested",
+   "name": "Builder Vested Launch",
+   "tagline": "For founders who want to prove they are staying",
+   "useCase": "Solo builder / small team token where the market needs credible commitment: locked vesting + heavy LP lock.",
+   "rationale": [
+    "2% of supply cliff-vests to the team over 6 months — visible on-chain commitment, not a pinky promise.",
+    "60% of LP permanently locked — the migration cannot be an exit.",
+    "Gentle 300→50 bps decay: buyers are investing in the builder, fees should not be the product."
+   ],
+   "params": {
+    "token": {
+     "tokenType": 0,
+     "tokenBaseDecimal": 6,
+     "tokenQuoteDecimal": 9,
+     "tokenAuthorityOption": 1,
+     "totalTokenSupply": 1000000000,
+     "leftover": 0
+    },
+    "fee": {
+     "baseFeeParams": {
+      "baseFeeMode": 0,
+      "feeSchedulerParam": {
+       "startingFeeBps": 300,
+       "endingFeeBps": 50,
+       "numberOfPeriod": 18,
+       "totalDuration": 7200
+      }
+     },
+     "dynamicFeeEnabled": true,
+     "collectFeeMode": 0,
+     "creatorTradingFeePercentage": 50,
+     "poolCreationFee": 0,
+     "enableFirstSwapWithMinFee": false
+    },
+    "migration": {
+     "migrationOption": 1,
+     "migrationFeeOption": 3,
+     "migrationFee": {
+      "feePercentage": 0,
+      "creatorFeePercentage": 0
+     }
+    },
+    "liquidityDistribution": {
+     "partnerLiquidityPercentage": 20,
+     "partnerPermanentLockedLiquidityPercentage": 30,
+     "creatorLiquidityPercentage": 20,
+     "creatorPermanentLockedLiquidityPercentage": 30
+    },
+    "lockedVesting": {
+     "totalLockedVestingAmount": 20000000,
+     "numberOfVestingPeriod": 6,
+     "cliffUnlockAmount": 0,
+     "totalVestingDuration": 15552000,
+     "cliffDurationFromMigrationTime": 2592000
+    },
+    "activationType": 1,
+    "percentageSupplyOnMigration": 18,
+    "migrationQuoteThreshold": 25
+   },
+   "result": {
+    "migrationQuoteThreshold": 25,
+    "supplyOnCurve": 794471442.121433,
+    "totalSupply": 1000000000,
+    "fdvAtStart": 7.551446071222579,
+    "fdvAtMigration": 135.28954255808617,
+    "avgPriceAtMigration": 3.146746210693727e-8,
+    "priceMultiple": 17.91571326631785,
+    "effectiveFeeBps": 300.0000000000003,
+    "points": [
+     {
+      "quoteIn": 0.3125,
+      "baseOut": 41382802.32059,
+      "marginalPrice": 7.55144607122258e-9,
+      "avgPrice": 7.55144607122258e-9,
+      "fdv": 7.551446071222579,
+      "pctToMigration": 0.0125
+     },
+     {
+      "quoteIn": 0.625,
+      "baseOut": 79575457.155034,
+      "marginalPrice": 8.182201560865891e-9,
+      "avgPrice": 7.854180451421536e-9,
+      "fdv": 8.182201560865892,
+      "pctToMigration": 0.025
+     },
+     {
+      "quoteIn": 0.9375,
+      "baseOut": 114933160.31274,
+      "marginalPrice": 8.838243779754471e-9,
+      "avgPrice": 8.156914831620452e-9,
+      "fdv": 8.838243779754471,
+      "pctToMigration": 0.0375
+     },
+     {
+      "quoteIn": 1.25,
+      "baseOut": 147760263.895289,
+      "marginalPrice": 9.519572727888366e-9,
+      "avgPrice": 8.459649211819346e-9,
+      "fdv": 9.519572727888367,
+      "pctToMigration": 0.05
+     },
+     {
+      "quoteIn": 1.5625,
+      "baseOut": 178319059.373672,
+      "marginalPrice": 1.0226188405268115e-8,
+      "avgPrice": 8.762383592018297e-9,
+      "fdv": 10.226188405268115,
+      "pctToMigration": 0.0625
+     },
+     {
+      "quoteIn": 1.875,
+      "baseOut": 206836800.772644,
+      "marginalPrice": 1.0958090811892447e-8,
+      "avgPrice": 9.065117972217182e-9,
+      "fdv": 10.958090811892447,
+      "pctToMigration": 0.075
+     },
+     {
+      "quoteIn": 2.1875,
+      "baseOut": 233511366.07483,
+      "marginalPrice": 1.171527994776322e-8,
+      "avgPrice": 9.367852352416128e-9,
+      "fdv": 11.71527994776322,
+      "pctToMigration": 0.0875
+     },
+     {
+      "quoteIn": 2.5,
+      "baseOut": 258515855.255038,
+      "marginalPrice": 1.2497755812878418e-8,
+      "avgPrice": 9.670586732615038e-9,
+      "fdv": 12.497755812878419,
+      "pctToMigration": 0.1
+     },
+     {
+      "quoteIn": 2.8125,
+      "baseOut": 282002350.890561,
+      "marginalPrice": 1.3305518407239442e-8,
+      "avgPrice": 9.973321112813952e-9,
+      "fdv": 13.305518407239441,
+      "pctToMigration": 0.1125
+     },
+     {
+      "quoteIn": 3.125,
+      "baseOut": 304105014.042092,
+      "marginalPrice": 1.4138567730846193e-8,
+      "avgPrice": 1.0276055493012885e-8,
+      "fdv": 14.138567730846193,
+      "pctToMigration": 0.125
+     },
+     {
+      "quoteIn": 3.4375,
+      "baseOut": 324942648.563673,
+      "marginalPrice": 1.4996903783697323e-8,
+      "avgPrice": 1.0578789873211785e-8,
+      "fdv": 14.996903783697324,
+      "pctToMigration": 0.1375
+     },
+     {
+      "quoteIn": 3.75,
+      "baseOut": 344620837.36335,
+      "marginalPrice": 1.5880526565795026e-8,
+      "avgPrice": 1.0881524253410708e-8,
+      "fdv": 15.880526565795027,
+      "pctToMigration": 0.15
+     },
+     {
+      "quoteIn": 4.0625,
+      "baseOut": 363233731.719316,
+      "marginalPrice": 1.6789436077137228e-8,
+      "avgPrice": 1.1184258633609618e-8,
+      "fdv": 16.78943607713723,
+      "pctToMigration": 0.1625
+     },
+     {
+      "quoteIn": 4.375,
+      "baseOut": 380865557.656455,
+      "marginalPrice": 1.7723632317726236e-8,
+      "avgPrice": 1.1486993013808561e-8,
+      "fdv": 17.723632317726235,
+      "pctToMigration": 0.175
+     },
+     {
+      "quoteIn": 4.6875,
+      "baseOut": 397591890.240192,
+      "marginalPrice": 1.8683115287558206e-8,
+      "avgPrice": 1.1789727394007463e-8,
+      "fdv": 18.683115287558206,
+      "pctToMigration": 0.1875
+     },
+     {
+      "quoteIn": 5,
+      "baseOut": 413480736.458904,
+      "marginalPrice": 1.9667884986637603e-8,
+      "avgPrice": 1.2092461774206383e-8,
+      "fdv": 19.667884986637603,
+      "pctToMigration": 0.2
+     },
+     {
+      "quoteIn": 5.3125,
+      "baseOut": 428593459.419512,
+      "marginalPrice": 2.0677941414961857e-8,
+      "avgPrice": 1.2395196154405303e-8,
+      "fdv": 20.677941414961857,
+      "pctToMigration": 0.2125
+     },
+     {
+      "quoteIn": 5.625,
+      "baseOut": 442985570.339263,
+      "marginalPrice": 2.1713284572532017e-8,
+      "avgPrice": 1.2697930534604236e-8,
+      "fdv": 21.713284572532018,
+      "pctToMigration": 0.225
+     },
+     {
+      "quoteIn": 5.9375,
+      "baseOut": 456707409.883266,
+      "marginalPrice": 2.27739144593464e-8,
+      "avgPrice": 1.3000664914803156e-8,
+      "fdv": 22.7739144593464,
+      "pctToMigration": 0.2375
+     },
+     {
+      "quoteIn": 6.25,
+      "baseOut": 469804736.474237,
+      "marginalPrice": 2.3859831075406578e-8,
+      "avgPrice": 1.3303399295002074e-8,
+      "fdv": 23.85983107540658,
+      "pctToMigration": 0.25
+     },
+     {
+      "quoteIn": 6.5625,
+      "baseOut": 482319236.063441,
+      "marginalPrice": 2.497103442071215e-8,
+      "avgPrice": 1.360613367520099e-8,
+      "fdv": 24.97103442071215,
+      "pctToMigration": 0.2625
+     },
+     {
+      "quoteIn": 6.875,
+      "baseOut": 494288965.328914,
+      "marginalPrice": 2.6107524495262753e-8,
+      "avgPrice": 1.3908868055399899e-8,
+      "fdv": 26.107524495262755,
+      "pctToMigration": 0.275
+     },
+     {
+      "quoteIn": 7.1875,
+      "baseOut": 505748738.227854,
+      "marginalPrice": 2.7269301299060186e-8,
+      "avgPrice": 1.421160243559882e-8,
+      "fdv": 27.269301299060185,
+      "pctToMigration": 0.2875
+     },
+     {
+      "quoteIn": 7.5,
+      "baseOut": 516730464.173659,
+      "marginalPrice": 2.8456364832103105e-8,
+      "avgPrice": 1.4514336815797752e-8,
+      "fdv": 28.456364832103105,
+      "pctToMigration": 0.3
+     },
+     {
+      "quoteIn": 7.8125,
+      "baseOut": 527263444.756263,
+      "marginalPrice": 2.9668715094388118e-8,
+      "avgPrice": 1.4817071195996658e-8,
+      "fdv": 29.66871509438812,
+      "pctToMigration": 0.3125
+     },
+     {
+      "quoteIn": 8.125,
+      "baseOut": 537374634.816197,
+      "marginalPrice": 3.090635208592244e-8,
+      "avgPrice": 1.511980557619558e-8,
+      "fdv": 30.90635208592244,
+      "pctToMigration": 0.325
+     },
+     {
+      "quoteIn": 8.4375,
+      "baseOut": 547088872.770379,
+      "marginalPrice": 3.2169275806700924e-8,
+      "avgPrice": 1.5422539956394506e-8,
+      "fdv": 32.169275806700924,
+      "pctToMigration": 0.3375
+     },
+     {
+      "quoteIn": 8.75,
+      "baseOut": 556429084.33326,
+      "marginalPrice": 3.3457486256725134e-8,
+      "avgPrice": 1.5725274336593438e-8,
+      "fdv": 33.45748625672513,
+      "pctToMigration": 0.35
+     },
+     {
+      "quoteIn": 9.0625,
+      "baseOut": 565416463.150867,
+      "marginalPrice": 3.477098343599247e-8,
+      "avgPrice": 1.6028008716792356e-8,
+      "fdv": 34.77098343599247,
+      "pctToMigration": 0.3625
+     },
+     {
+      "quoteIn": 9.375,
+      "baseOut": 574070631.343605,
+      "marginalPrice": 3.6109767344506556e-8,
+      "avgPrice": 1.6330743096991274e-8,
+      "fdv": 36.10976734450656,
+      "pctToMigration": 0.375
+     },
+     {
+      "quoteIn": 9.6875,
+      "baseOut": 582409782.517496,
+      "marginalPrice": 3.7473837982264477e-8,
+      "avgPrice": 1.663347747719018e-8,
+      "fdv": 37.47383798226448,
+      "pctToMigration": 0.3875
+     },
+     {
+      "quoteIn": 10,
+      "baseOut": 590450809.437477,
+      "marginalPrice": 3.8863195349274904e-8,
+      "avgPrice": 1.6936211857389118e-8,
+      "fdv": 38.8631953492749,
+      "pctToMigration": 0.4
+     },
+     {
+      "quoteIn": 10.3125,
+      "baseOut": 598209418.248227,
+      "marginalPrice": 4.0277839445521844e-8,
+      "avgPrice": 1.7238946237588036e-8,
+      "fdv": 40.27783944552184,
+      "pctToMigration": 0.4125
+     },
+     {
+      "quoteIn": 10.625,
+      "baseOut": 605700230.867642,
+      "marginalPrice": 4.1717770271018074e-8,
+      "avgPrice": 1.7541680617786954e-8,
+      "fdv": 41.717770271018075,
+      "pctToMigration": 0.425
+     },
+     {
+      "quoteIn": 10.9375,
+      "baseOut": 612936876.957554,
+      "marginalPrice": 4.3182987825759876e-8,
+      "avgPrice": 1.7844414997985876e-8,
+      "fdv": 43.182987825759874,
+      "pctToMigration": 0.4375
+     },
+     {
+      "quoteIn": 11.25,
+      "baseOut": 619932076.688802,
+      "marginalPrice": 4.467349210974517e-8,
+      "avgPrice": 1.814714937818479e-8,
+      "fdv": 44.67349210974517,
+      "pctToMigration": 0.45
+     },
+     {
+      "quoteIn": 11.5625,
+      "baseOut": 626697715.358014,
+      "marginalPrice": 4.618928312297794e-8,
+      "avgPrice": 1.8449883758383712e-8,
+      "fdv": 46.18928312297794,
+      "pctToMigration": 0.4625
+     },
+     {
+      "quoteIn": 11.875,
+      "baseOut": 633244910.776898,
+      "marginalPrice": 4.773036086545668e-8,
+      "avgPrice": 1.8752618138582634e-8,
+      "fdv": 47.73036086545668,
+      "pctToMigration": 0.475
+     },
+     {
+      "quoteIn": 12.1875,
+      "baseOut": 639584074.237809,
+      "marginalPrice": 4.929672533717798e-8,
+      "avgPrice": 1.9055352518781552e-8,
+      "fdv": 49.296725337177975,
+      "pctToMigration": 0.4875
+     },
+     {
+      "quoteIn": 12.5,
+      "baseOut": 645724965.758798,
+      "marginalPrice": 5.08883765381461e-8,
+      "avgPrice": 1.935808689898047e-8,
+      "fdv": 50.8883765381461,
+      "pctToMigration": 0.5
+     },
+     {
+      "quoteIn": 12.8125,
+      "baseOut": 651676744.224734,
+      "marginalPrice": 5.250531446836335e-8,
+      "avgPrice": 1.9660821279179398e-8,
+      "fdv": 52.505314468363345,
+      "pctToMigration": 0.5125
+     },
+     {
+      "quoteIn": 13.125,
+      "baseOut": 657448012.96628,
+      "marginalPrice": 5.414753912781508e-8,
+      "avgPrice": 1.9963555659378307e-8,
+      "fdv": 54.14753912781508,
+      "pctToMigration": 0.525
+     },
+     {
+      "quoteIn": 13.4375,
+      "baseOut": 663046861.253759,
+      "marginalPrice": 5.581505051652459e-8,
+      "avgPrice": 2.0266290039577228e-8,
+      "fdv": 55.81505051652459,
+      "pctToMigration": 0.5375
+     },
+     {
+      "quoteIn": 13.75,
+      "baseOut": 668480902.126793,
+      "marginalPrice": 5.75078486344769e-8,
+      "avgPrice": 2.0569024419776156e-8,
+      "fdv": 57.5078486344769,
+      "pctToMigration": 0.55
+     },
+     {
+      "quoteIn": 14.0625,
+      "baseOut": 673757306.931738,
+      "marginalPrice": 5.922593348166317e-8,
+      "avgPrice": 2.0871758799975058e-8,
+      "fdv": 59.22593348166317,
+      "pctToMigration": 0.5625
+     },
+     {
+      "quoteIn": 14.375,
+      "baseOut": 678882836.8964,
+      "marginalPrice": 6.096930505811808e-8,
+      "avgPrice": 2.1174493180174003e-8,
+      "fdv": 60.96930505811808,
+      "pctToMigration": 0.575
+     },
+     {
+      "quoteIn": 14.6875,
+      "baseOut": 683863872.034375,
+      "marginalPrice": 6.273796336378502e-8,
+      "avgPrice": 2.1477227560372894e-8,
+      "fdv": 62.73796336378502,
+      "pctToMigration": 0.5875
+     },
+     {
+      "quoteIn": 15,
+      "baseOut": 688706437.638806,
+      "marginalPrice": 6.45319083987333e-8,
+      "avgPrice": 2.177996194057183e-8,
+      "fdv": 64.53190839873331,
+      "pctToMigration": 0.6
+     },
+     {
+      "quoteIn": 15.3125,
+      "baseOut": 693416228.596923,
+      "marginalPrice": 6.63511401629041e-8,
+      "avgPrice": 2.2082696320770747e-8,
+      "fdv": 66.3511401629041,
+      "pctToMigration": 0.6125
+     },
+     {
+      "quoteIn": 15.625,
+      "baseOut": 697998631.731628,
+      "marginalPrice": 6.819565865632233e-8,
+      "avgPrice": 2.238543070096966e-8,
+      "fdv": 68.19565865632232,
+      "pctToMigration": 0.625
+     },
+     {
+      "quoteIn": 15.9375,
+      "baseOut": 702458746.354428,
+      "marginalPrice": 7.006546387899978e-8,
+      "avgPrice": 2.2688165081168594e-8,
+      "fdv": 70.06546387899978,
+      "pctToMigration": 0.6375
+     },
+     {
+      "quoteIn": 16.25,
+      "baseOut": 706801403.194577,
+      "marginalPrice": 7.19605558309054e-8,
+      "avgPrice": 2.299089946136751e-8,
+      "fdv": 71.9605558309054,
+      "pctToMigration": 0.65
+     },
+     {
+      "quoteIn": 16.5625,
+      "baseOut": 711031181.852141,
+      "marginalPrice": 7.388093451206042e-8,
+      "avgPrice": 2.329363384156642e-8,
+      "fdv": 73.88093451206042,
+      "pctToMigration": 0.6625
+     },
+     {
+      "quoteIn": 16.875,
+      "baseOut": 715152426.907564,
+      "marginalPrice": 7.582659992246536e-8,
+      "avgPrice": 2.3596368221765335e-8,
+      "fdv": 75.82659992246536,
+      "pctToMigration": 0.675
+     },
+     {
+      "quoteIn": 17.1875,
+      "baseOut": 719169262.806854,
+      "marginalPrice": 7.779755206211908e-8,
+      "avgPrice": 2.3899102601964257e-8,
+      "fdv": 77.79755206211908,
+      "pctToMigration": 0.6875
+     },
+     {
+      "quoteIn": 17.5,
+      "baseOut": 723085607.6296,
+      "marginalPrice": 7.979379093102512e-8,
+      "avgPrice": 2.4201836982163195e-8,
+      "fdv": 79.79379093102511,
+      "pctToMigration": 0.7
+     },
+     {
+      "quoteIn": 17.8125,
+      "baseOut": 726905185.836435,
+      "marginalPrice": 8.181531652913913e-8,
+      "avgPrice": 2.4504571362362093e-8,
+      "fdv": 81.81531652913912,
+      "pctToMigration": 0.7125
+     },
+     {
+      "quoteIn": 18.125,
+      "baseOut": 730631540.083112,
+      "marginalPrice": 8.386212885655475e-8,
+      "avgPrice": 2.4807305742561038e-8,
+      "fdv": 83.86212885655475,
+      "pctToMigration": 0.725
+     },
+     {
+      "quoteIn": 18.4375,
+      "baseOut": 734268042.179992,
+      "marginalPrice": 8.593422791316917e-8,
+      "avgPrice": 2.511004012275996e-8,
+      "fdv": 85.93422791316917,
+      "pctToMigration": 0.7375
+     },
+     {
+      "quoteIn": 18.75,
+      "baseOut": 737817903.268173,
+      "marginalPrice": 8.803161369903853e-8,
+      "avgPrice": 2.541277450295887e-8,
+      "fdv": 88.03161369903853,
+      "pctToMigration": 0.75
+     },
+     {
+      "quoteIn": 19.0625,
+      "baseOut": 741284183.276842,
+      "marginalPrice": 9.015428621416931e-8,
+      "avgPrice": 2.5715508883157793e-8,
+      "fdv": 90.1542862141693,
+      "pctToMigration": 0.7625
+     },
+     {
+      "quoteIn": 19.375,
+      "baseOut": 744669799.720381,
+      "marginalPrice": 9.230224545853758e-8,
+      "avgPrice": 2.6018243263356718e-8,
+      "fdv": 92.30224545853758,
+      "pctToMigration": 0.775
+     },
+     {
+      "quoteIn": 19.6875,
+      "baseOut": 747977535.888385,
+      "marginalPrice": 9.447549143212643e-8,
+      "avgPrice": 2.6320977643555613e-8,
+      "fdv": 94.47549143212643,
+      "pctToMigration": 0.7875
+     },
+     {
+      "quoteIn": 20,
+      "baseOut": 751210048.476912,
+      "marginalPrice": 9.667402413501638e-8,
+      "avgPrice": 2.6623712023754548e-8,
+      "fdv": 96.67402413501638,
+      "pctToMigration": 0.8
+     },
+     {
+      "quoteIn": 20.3125,
+      "baseOut": 754369874.704953,
+      "marginalPrice": 9.889784356709624e-8,
+      "avgPrice": 2.6926446403953456e-8,
+      "fdv": 98.89784356709623,
+      "pctToMigration": 0.8125
+     },
+     {
+      "quoteIn": 20.625,
+      "baseOut": 757459438.956163,
+      "marginalPrice": 1.0114694972846178e-7,
+      "avgPrice": 2.7229180784152384e-8,
+      "fdv": 101.14694972846178,
+      "pctToMigration": 0.825
+     },
+     {
+      "quoteIn": 20.9375,
+      "baseOut": 760481058.982419,
+      "marginalPrice": 1.0342134261904966e-7,
+      "avgPrice": 2.7531915164351302e-8,
+      "fdv": 103.42134261904965,
+      "pctToMigration": 0.8375
+     },
+     {
+      "quoteIn": 21.25,
+      "baseOut": 763436951.702543,
+      "marginalPrice": 1.0572102223888894e-7,
+      "avgPrice": 2.7834649544550224e-8,
+      "fdv": 105.72102223888893,
+      "pctToMigration": 0.85
+     },
+     {
+      "quoteIn": 21.5625,
+      "baseOut": 766329238.626694,
+      "marginalPrice": 1.0804598858798807e-7,
+      "avgPrice": 2.813738392474916e-8,
+      "fdv": 108.04598858798808,
+      "pctToMigration": 0.8625
+     },
+     {
+      "quoteIn": 21.875,
+      "baseOut": 769159950.934316,
+      "marginalPrice": 1.1039624166629423e-7,
+      "avgPrice": 2.844011830494807e-8,
+      "fdv": 110.39624166629423,
+      "pctToMigration": 0.875
+     },
+     {
+      "quoteIn": 22.1875,
+      "baseOut": 771931034.231181,
+      "marginalPrice": 1.1277178147388824e-7,
+      "avgPrice": 2.8742852685147e-8,
+      "fdv": 112.77178147388824,
+      "pctToMigration": 0.8875
+     },
+     {
+      "quoteIn": 22.5,
+      "baseOut": 774644353.00895,
+      "marginalPrice": 1.1517260801067893e-7,
+      "avgPrice": 2.9045587065345897e-8,
+      "fdv": 115.17260801067893,
+      "pctToMigration": 0.9
+     },
+     {
+      "quoteIn": 22.8125,
+      "baseOut": 777301694.828718,
+      "marginalPrice": 1.1759872127677144e-7,
+      "avgPrice": 2.934832144554482e-8,
+      "fdv": 117.59872127677144,
+      "pctToMigration": 0.9125
+     },
+     {
+      "quoteIn": 23.125,
+      "baseOut": 779904774.248286,
+      "marginalPrice": 1.2005012127207946e-7,
+      "avgPrice": 2.9651055825743743e-8,
+      "fdv": 120.05012127207945,
+      "pctToMigration": 0.925
+     },
+     {
+      "quoteIn": 23.4375,
+      "baseOut": 782455236.511276,
+      "marginalPrice": 1.2252680799661985e-7,
+      "avgPrice": 2.995379020594265e-8,
+      "fdv": 122.52680799661985,
+      "pctToMigration": 0.9375
+     },
+     {
+      "quoteIn": 23.75,
+      "baseOut": 784954661.014776,
+      "marginalPrice": 1.2502878145045037e-7,
+      "avgPrice": 3.025652458614158e-8,
+      "fdv": 125.02878145045038,
+      "pctToMigration": 0.95
+     },
+     {
+      "quoteIn": 24.0625,
+      "baseOut": 787404564.570876,
+      "marginalPrice": 1.275560416335193e-7,
+      "avgPrice": 3.055925896634053e-8,
+      "fdv": 127.55604163351931,
+      "pctToMigration": 0.9625
+     },
+     {
+      "quoteIn": 24.375,
+      "baseOut": 789806404.476242,
+      "marginalPrice": 1.3010858854574137e-7,
+      "avgPrice": 3.086199334653942e-8,
+      "fdv": 130.10858854574138,
+      "pctToMigration": 0.975
+     },
+     {
+      "quoteIn": 24.6875,
+      "baseOut": 792161581.402776,
+      "marginalPrice": 1.3268642218734862e-7,
+      "avgPrice": 3.116472772673836e-8,
+      "fdv": 132.68642218734863,
+      "pctToMigration": 0.9875
+     },
+     {
+      "quoteIn": 25,
+      "baseOut": 794471442.121433,
+      "marginalPrice": 1.3528954255808618e-7,
+      "avgPrice": 3.146746210693727e-8,
+      "fdv": 135.28954255808617,
+      "pctToMigration": 1
+     }
+    ]
+   }
+  }
+ ]
+}
