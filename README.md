@@ -50,12 +50,24 @@ quote→base) from the launch state. Marginal price is the finite difference bet
 consecutive cumulative quotes; FDV is marginal price × total supply. The quote engine is
 the same code path the program uses, including the fee scheduler's cliff fee.
 
+## Devnet proof
+
+Full lifecycle executed on Solana devnet with the `devnet-toy` preset:
+
+- Token: **CLAB** (`3xwRKHfWAGnXyRy91QW1gymgt2of8kA2cUzwWxyNviNT`)
+- DBC config: `FhCHhGgUwy3vspgkb9ppyqzqoxwCnf76KLnYENcoSvpK`
+- DBC pool: `95NsmiqLb3WVMyPLosbhDCggMKTvBjqgKZZufGR6ekkw` (graduated 100.00%)
+- DAMM v2 pool (post-migration): `8ug4RWCa6ciS2VGbUHYbUP4NjRrP2RuHYno8sLF5h9zQ`
+- Every transaction is linked on the [live dashboard](https://paulcrossland-assistant.github.io/curvelab/) (Solana Explorer, devnet).
+
+Notable finding while building: a launch cannot be graduated with ExactIn buys once the remaining curve capacity is below the minimum fee-adjusted input — the final graduation needs a `PartialFill` swap (`src/launch/partial-buy.ts`). This edge case is now part of the simulator output.
+
 ## Roadmap
 
 - [x] Off-chain curve simulation (exact, SDK-backed)
 - [x] Six opinionated presets with rationale
 - [x] Static dashboard (zero-dependency, canvas)
-- [ ] One-command devnet launch + lifecycle watcher
+- [x] One-command devnet launch + full lifecycle incl. DAMM v2 migration (devnet proof above)
 - [ ] Preset marketplace: publish a config on-chain, let other builders pay-to-use it
 - [ ] DAMM v2 post-migration fee-schedule designer (`migratedPoolFee` market-cap scheduler)
 
